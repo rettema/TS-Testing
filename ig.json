@@ -1,0 +1,124 @@
+{
+  "do-transforms": "false",
+  "resources": {
+    "StructureDefinition/testscript-rule": {
+      "defns": "StructureDefinition-testscript-rule-definitions.html",
+      "base": "StructureDefinition-testscript-rule.html",
+      "source": "structuredefinition-testscript-rule.xml"
+    },
+    "StructureDefinition/testscript-ruleset": {
+      "defns": "StructureDefinition-testscript-ruleset-definitions.html",
+      "base": "StructureDefinition-testscript-ruleset.html",
+      "source": "structuredefinition-testscript-ruleset.xml"
+    },
+    "StructureDefinition/testscript-assert-rule": {
+      "defns": "StructureDefinition-testscript-assert-rule-definitions.html",
+      "base": "StructureDefinition-testscript-assert-rule.html",
+      "source": "structuredefinition-testscript-assert-rule.xml"
+    },
+    "StructureDefinition/testscript-assert-ruleset": {
+      "defns": "StructureDefinition-testscript-assert-ruleset-definitions.html",
+      "base": "StructureDefinition-testscript-assert-ruleset.html",
+      "source": "structuredefinition-testscript-assert-ruleset.xml"
+    },
+    "StructureDefinition/ts-testing-testscript": {
+      "defns": "StructureDefinition-ts-testing-testscript-definitions.html",
+      "base": "StructureDefinition-ts-testing-testscript.html",
+      "source": "structuredefinition-ts-testing-testscript.xml"
+    },
+    "TestScript/patient-read-summary-rule-no-param-json": {
+      "base": "TestScript-patient-read-summary-rule-no-param-json.html",
+      "source": "patient-read-summary-rule-no-param-json.xml"
+    },
+    "TestScript/patient-read-summary-rule-with-param-json": {
+      "base": "TestScript-patient-read-summary-rule-with-param-json.html",
+      "source": "patient-read-summary-rule-with-param-json.xml"
+    },
+    "TestScript/patient-read-versioning-ruleset-json": {
+      "base": "TestScript-patient-read-versioning-ruleset-json.html",
+      "source": "patient-read-versioning-ruleset-json.xml"
+    }
+  },
+  "source": "ig.xml",
+  "topofpage": "true",
+  "jurisdiction": "US",
+  "allviews": "true",
+  "fixed-business-version": "0.1.0",
+  "title": "Touchstone Testing",
+  "npm-name": "net.aegis.touchstone.fhir.testing",
+  "igtemplate-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",
+  "canonicalBase": "http://touchstone.aegis.net/fhir/testing",
+  "name": "TSTesting",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "html-template": "html-template.html",
+  "license": "CC0-1.0",
+  "version": "3.6.0",
+  "logging": [
+    "progress"
+  ],
+  "tool": "jekyll",
+  "special-urls": [
+    "urn:oid:2.16.840.1.113883.6.238"
+  ],
+  "pub_url": "richard.ettema@aegis.net",
+  "broken-links": "warning",
+  "extraTemplates": [
+    "mappings"
+  ],
+  "publisher": "AEGIS.net, Inc.",
+  "no-inactive-codes": "false",
+  "defaults": {
+    "CodeSystem": {
+      "template-base": "base.html"
+    },
+    "OperationDefinition": {
+      "template-base": "base.html"
+    },
+    "SearchParameter": {
+      "template-base": "base.html"
+    },
+    "StructureDefinition": {
+      "template-mappings": "sd-mappings.html",
+      "template-base": "sd.html",
+      "template-defns": "sd-definitions.html"
+    },
+    "TestScript": {
+      "template-base": "ex.html"
+    },
+    "ValueSet": {
+      "template-base": "base.html"
+    },
+    "Any": {
+      "template-base": "base.html",
+      "swagger": "true",
+      "template-format": "format.html"
+    }
+  },
+  "paths": {
+    "pages": [
+      "framework",
+      "source/pages"
+    ],
+    "specification": "http://build.fhir.org",
+    "output": "output",
+    "qa": "generated_output/qa",
+    "txCache": "generated_output/txCache",
+    "temp": "generated_output/temp",
+    "resources": [
+      "source/resources",
+      "source/examples"
+    ]
+  },
+  "working-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",
+  "status": "draft",
+  "swagger": [
+    {
+      "mode": "single",
+      "capabilities": "server"
+    }
+  ],
+  "mappings": "true",
+  "spreadsheets": [
+  ],
+  "gen-examples": "false"
+}

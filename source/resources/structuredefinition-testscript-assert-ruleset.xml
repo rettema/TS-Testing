@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="testscript-assert-ruleset"/>
+	<url value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
+	<version value="0.1.0"/>
+	<name value="AEGISTouchstoneTestingTestScriptAssertRulesetExtension"/>
+	<title value="AEGIS Touchstone Testing TestScript Assert Ruleset Extension"/>
+	<status value="draft"/>
+	<date value="2018-10-10"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.aegis.net"/>
+		</telecom>
+	</contact>
+	<description value="Formal definitions of Touchstone TestScript assert ruleset extensions"/>
+	<purpose value="TestScript assert ruleset definition used within TestScript asserts. The ruleset must reference the id of the TestScript ruleset extension."/>
+	<fhirVersion value="3.6.0"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<context>
+		<type value="element"/>
+		<expression value="TestScript.setup.action.assert"/>
+	</context>
+	<context>
+		<type value="element"/>
+		<expression value="TestScript.test.action.assert"/>
+	</context>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Extension:testscript-assert-ruleset">
+			<path value="Extension"/>
+			<short value="Ruleset used within the test script assert"/>
+			<definition value="TestScript assert ruleset definition used within TestScript asserts. The ruleset must reference the id of the TestScript ruleset extension."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rulesetId">
+			<path value="Extension.extension"/>
+			<sliceName value="rulesetId"/>
+			<short value="Ruleset unique id within TestScript"/>
+			<definition value="The identifier to a TestScript ruleset extension."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rulesetId.url">
+			<path value="Extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="rulesetId"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rulesetId.valueId">
+			<path value="Extension.extension.valueId"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="id"/>
+			</type>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule">
+			<path value="Extension.extension"/>
+			<sliceName value="rule"/>
+			<short value="The referenced rule within the ruleset"/>
+			<definition value="The referenced rule within the external ruleset template."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:ruleId">
+			<path value="Extension.extension.extension"/>
+			<sliceName value="ruleId"/>
+			<short value="Rule unique id within the assert ruleset"/>
+			<definition value="The identifier to a TestScript assert ruleset extension rule."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension:testscript-assert-rule.extension:ruleId.url">
+			<path value="Extension.extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="ruleId"/>
+		</element>
+		<element id="Extension:testscript-assert-rule.extension:ruleId.valueId">
+			<path value="Extension.extension.extension.valueId"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="id"/>
+			</type>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param">
+			<path value="Extension.extension.extension"/>
+			<sliceName value="param"/>
+			<short value="Rule parameter template"/>
+			<definition value="Each rule template can override a corresponding parameter in the ruleset extension"/>
+			<min value="0"/>
+			<max value="*"/>
+			<isModifier value="false"/>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param.extension:name">
+			<path value="Extension.extension.extension.extension"/>
+			<sliceName value="name"/>
+			<short value="Parameter name matching ruleset extension parameter name"/>
+			<definition value="Descriptive name for this parameter that matches a corresponding parameter name in the ruleset extension."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:name.url">
+			<path value="Extension.extension.extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="name"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:name.valueString">
+			<path value="Extension.extension.extension.extension.valueString"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param.extension:value">
+			<path value="Extension.extension.extension.extension"/>
+			<sliceName value="value"/>
+			<short value="Parameter value matching ruleset extension parameter value"/>
+			<definition value="The explicit or dynamic value for the parameter that will be passed on to the external ruleset template."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param.extension:value.url">
+			<path value="Extension.extension.extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="value"/>
+		</element>
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param.extension:value.valueString">
+			<path value="Extension.extension.extension.extension.valueString"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.extension:param.url">
+			<path value="Extension.extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<fixedUri value="param"/>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.extension:rule.url">
+			<path value="Extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<fixedUri value="rule"/>
+		</element>
+
+		<element id="Extension:testscript-assert-ruleset.url">
+			<path value="Extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<fixedUri value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
+		</element>
+		<element id="Extension.value[x]">
+			<path value="Extension.value[x]"/> 
+			<min value="0"/> 
+			<max value="0"/> 
+		</element>
+	</differential>
+</StructureDefinition>

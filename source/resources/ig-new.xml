@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ig"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\framework"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\pages"/>
+  </extension>
+  <url value="http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig"/>
+  <version value="0.1.0"/>
+  <name value="TSTesting"/>
+  <title value="Touchstone Testing"/>
+  <status value="draft"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
+  <packageId value="net.aegis.touchstone.fhir.testing"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="3.6.0"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-rule"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-ruleset"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-rule"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-ruleset"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ts-testing-testscript"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-summary-rule-no-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-summary-rule-with-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-versioning-ruleset-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="index.md"/>
+      <title value="AEGIS Touchstone Testing Homepage"/>
+      <generation value="markdown"/>
+    </page>
+    <parameter>
+      <code value="apply-business-version"/>
+      <value value="0.1.0"/>
+    </parameter>
+    <parameter>
+      <code value="html-template"/>
+      <value value="html-template.html"/>
+    </parameter>
+    <parameter>
+      <code value="apply-jurisdiction"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
