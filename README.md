@@ -11,11 +11,11 @@ Builds are manually processed at this time.
 
 ### Find the rendered IG available at
 
-http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig
+TBD
 
 ### For a build log see
 
-http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig/build.log
+TBD
 
 ---
 
