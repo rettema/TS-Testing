@@ -18,10 +18,10 @@
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
   }],
   "url" : "http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig",
-  "version" : "0.1.0",
-  "name" : "TSTesting",
+  "version" : "1.0.0",
+  "name" : "TouchstoneTesting",
   "title" : "Touchstone Testing",
-  "status" : "draft",
+  "status" : "active",
   "publisher" : "AEGIS.net, Inc.",
   "jurisdiction" : [{
     "coding" : [{
@@ -32,7 +32,8 @@
   "copyright" : "Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License",
   "packageId" : "net.aegis.touchstone.fhir.testing",
   "license" : "CC0-1.0",
-  "fhirVersion" : "3.6.0",
+  "fhirVersion" : ["4.0.0",
+  "4.0.0"],
   "definition" : {
     "resource" : [{
       "reference" : {
@@ -60,7 +61,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/ts-testing-testscript"
+        "reference" : "StructureDefinition/touchstone-testing-testscript"
       },
       "exampleBoolean" : false
     },
@@ -81,6 +82,12 @@
         "reference" : "TestScript/patient-read-versioning-ruleset-json"
       },
       "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/patient-read-notfound-ruleset-with-param-json"
+      },
+      "exampleBoolean" : true
     }],
     "page" : {
       "nameUrl" : "index.md",
@@ -88,16 +95,12 @@
       "generation" : "markdown"
     },
     "parameter" : [{
-      "code" : "apply-business-version",
-      "value" : "0.1.0"
+      "code" : "apply",
+      "value" : "jurisdiction"
     },
     {
       "code" : "html-template",
       "value" : "html-template.html"
-    },
-    {
-      "code" : "apply-jurisdiction",
-      "value" : "true"
     },
     {
       "code" : "generate-json",

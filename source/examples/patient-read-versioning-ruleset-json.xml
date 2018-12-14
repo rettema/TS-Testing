@@ -2,7 +2,7 @@
 <TestScript xmlns="http://hl7.org/fhir">
 	<id value="patient-read-versioning-ruleset-json" />
 	<meta>
-		<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/ts-testing-testscript"/>
+		<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/touchstone-testing-testscript"/>
 	</meta>
 	<extension url="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-ruleset">
 		<extension url="rulesetId">
@@ -41,7 +41,7 @@
 	<url value="http://touchstone.aegis.net/fhir/testing/TestScript/patient-read-versioning-ruleset-json" />
 	<name value="PatientReadVersioningRulesetJson" />
 	<status value="active" />
-	<date value="2018-10-10" />
+	<date value="2018-12-14" />
 	<publisher value="AEGIS.net, Inc." />
 	<contact>
 		<name value="Touchstone Support" />

@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="testscript-assert-rule"/>
 	<url value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-rule"/>
-	<version value="0.1.0"/>
+	<version value="1.0.0"/>
 	<name value="AEGISTouchstoneTestingTestScriptAssertRuleExtension"/>
 	<title value="AEGIS Touchstone Testing TestScript Assert Rule Extension"/>
-	<status value="draft"/>
-	<date value="2018-10-10"/>
+	<status value="active"/>
+	<date value="2018-12-14"/>
 	<publisher value="AEGIS.net, Inc."/>
 	<contact>
 		<telecom>
@@ -16,7 +16,7 @@
 	</contact>
 	<description value="Formal definitions of Touchstone TestScript assert rule extensions"/>
 	<purpose value="TestScript assert rule definition used within TestScript asserts. The rule must reference the id of the TestScript rule extension."/>
-	<fhirVersion value="3.6.0"/>
+	<fhirVersion value="4.0.0"/>
 	<mapping>
 		<identity value="rim"/>
 		<uri value="http://hl7.org/v3"/>

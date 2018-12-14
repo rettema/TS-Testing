@@ -15,10 +15,10 @@
     <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\pages"/>
   </extension>
   <url value="http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig"/>
-  <version value="0.1.0"/>
-  <name value="TSTesting"/>
+  <version value="1.0.0"/>
+  <name value="TouchstoneTesting"/>
   <title value="Touchstone Testing"/>
-  <status value="draft"/>
+  <status value="active"/>
   <publisher value="AEGIS.net, Inc."/>
   <jurisdiction>
     <coding>
@@ -29,7 +29,8 @@
   <copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
   <packageId value="net.aegis.touchstone.fhir.testing"/>
   <license value="CC0-1.0"/>
-  <fhirVersion value="3.6.0"/>
+  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.0"/>
   <definition>
     <resource>
       <reference>
@@ -57,7 +58,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ts-testing-testscript"/>
+        <reference value="StructureDefinition/touchstone-testing-testscript"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -79,22 +80,24 @@
       </reference>
       <exampleBoolean value="true"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-notfound-ruleset-with-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
     <page>
       <nameUrl value="index.md"/>
       <title value="AEGIS Touchstone Testing Homepage"/>
       <generation value="markdown"/>
     </page>
     <parameter>
-      <code value="apply-business-version"/>
-      <value value="0.1.0"/>
+      <code value="apply"/>
+      <value value="jurisdiction"/>
     </parameter>
     <parameter>
       <code value="html-template"/>
       <value value="html-template.html"/>
-    </parameter>
-    <parameter>
-      <code value="apply-jurisdiction"/>
-      <value value="true"/>
     </parameter>
     <parameter>
       <code value="generate-json"/>

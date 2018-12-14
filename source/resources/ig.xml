@@ -3,10 +3,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
 	<id value="ig"/>
 	<url value="http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig"/>
-	<version value="0.1.0"/>
-	<name value="TSTesting"/>
+	<version value="1.0.0"/>
+	<name value="TouchstoneTesting"/>
 	<title value="Touchstone Testing"/>
-	<status value="draft"/>
+	<status value="active"/>
 	<publisher value="AEGIS.net, Inc."/>
 	<copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
 	<!-- 0..1 Use and/or publishing restrictions -->
@@ -14,7 +14,7 @@
 	<!-- 0..1 NPM Package name for IG -->
 	<license value="CC0-1.0"/>
 	<!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
-	<fhirVersion value="3.6.0"/>
+	<fhirVersion value="4.0.0"/>
 	<!-- 0..1 FHIR Version this Implementation Guide targets -->
 	<definition>
 		<!--  <grouping> -->
@@ -48,7 +48,7 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/ts-testing-testscript"/></reference>
+				<reference value="StructureDefinition/touchstone-testing-testscript"/></reference>
 			<exampleBoolean value="false"/>
 		</resource>
 		<resource>
@@ -64,6 +64,11 @@
 		<resource>
 			<reference>
 				<reference value="TestScript/patient-read-versioning-ruleset-json"/></reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="TestScript/patient-read-notfound-ruleset-with-param-json"/></reference>
 			<exampleBoolean value="true"/>
 		</resource>
 		<page>

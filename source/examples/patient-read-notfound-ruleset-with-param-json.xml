@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestScript xmlns="http://hl7.org/fhir">
+	<id value="patient-read-notfound-ruleset-with-param-json" />
+	<meta>
+		<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/touchstone-testing-testscript"/>
+	</meta>
+	<extension url="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-ruleset">
+		<extension url="rulesetId">
+			<valueId value="RulesetPatientNotFound"/>
+		</extension>
+		<extension url="path">
+			<valueString value="../_reference/ruleset/RuleSet-NotFound-Groovy.xml"/>
+		</extension>
+		<extension url="rule">
+			<extension url="ruleId">
+				<valueId value="assertContentTypeIfBody"/>
+			</extension>
+		</extension>
+		<extension url="rule">
+			<extension url="ruleId">
+				<valueId value="assertContentTypeMimeTypeIfBody"/>
+			</extension>
+		</extension>
+		<extension url="rule">
+			<extension url="ruleId">
+				<valueId value="assertContentTypeCharsetIfBody"/>
+			</extension>
+		</extension>
+		<extension url="rule">
+			<extension url="ruleId">
+				<valueId value="assertResourceIfBody"/>
+			</extension>
+			<extension url="param">
+				<extension url="name">
+					<valueString value="resourceOperator"/>
+				</extension>
+				<extension url="value">
+					<valueString value="equals"/>
+				</extension>
+			</extension>
+			<extension url="param">
+				<extension url="name">
+					<valueString value="bodyOperator"/>
+				</extension>
+				<extension url="value">
+					<valueString value="notEmpty"/>
+				</extension>
+			</extension>
+		</extension>
+	</extension>
+	<url value="http://touchstone.aegis.net/fhir/testing/TestScript/patient-read-notfound-ruleset-with-param-json" />
+	<name value="PatientReadNotFoundRulesetWithParamJson" />
+	<status value="active" />
+	<date value="2018-12-14" />
+	<publisher value="AEGIS.net, Inc." />
+	<contact>
+		<name value="Touchstone Support" />
+		<telecom>
+			<system value="email" />
+			<value value="Touchstone_Support@aegis.net" />
+			<use value="work" />
+		</telecom>
+	</contact>
+	<description value="Demonstrate the use of a ruleset with a Patient read. The actual test is a read operation for a Patient in JSON format where the patient is not found and a ruleset is used to conditionally check the system under test to either skip or apply checks for HTTP response headers the payload content." />
+	<copyright value="(c) AEGIS.net, Inc. 2015+" />
+	<profile id="patient-profile">
+		<reference value="http://hl7.org/fhir/StructureDefinition/Patient" />
+	</profile>
+	<variable>
+		<name value="NotFoundPatientResourceId"/>
+		<description value="Enter a Patient resource id that does not exist on the destination system."/>
+		<hint value="[Not Found Resource Id]"/>
+	</variable>
+	<test id="01-ReadNotFoundJSON">
+		<name value="ReadNotFoundJSON"/>
+		<description value="Test the read operation for a known, not found (never existed) Patient resource instance. The expected HTTP response is 404 (Not Found) and optional content of an OperationOutcome resource in JSON format."/>
+
+		<action>
+			<operation>
+				<type>
+					<system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+					<code value="read"/>
+				</type>
+				<resource value="Patient"/>
+				<description value="Patient read operation for a known, not found (never existed) resource instance."/>
+				<accept value="json"/>
+				<encodeRequestUrl value="true"/>
+				<params value="/${NotFoundPatientResourceId}"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 404(Not Found)."/>
+				<direction value="response"/>
+				<responseCode value="404"/>
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<extension url="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-ruleset">
+					<extension url="rulesetId">
+						<valueId value="RulesetPatientNotFound"/>
+					</extension>
+					<extension url="rule">
+						<extension url="ruleId">
+							<valueId value="assertContentTypeMimeTypeIfBody"/>
+						</extension>
+						<extension url="param">
+							<extension url="name">
+								<valueString value="headerExpectedValue"/>
+							</extension>
+							<extension url="value">
+								<valueString value="application/fhir+json"/>
+							</extension>
+						</extension>
+					</extension>
+					<extension url="rule">
+						<extension url="ruleId">
+							<valueId value="assertResourceIfBody"/>
+						</extension>
+						<extension url="param">
+							<extension url="name">
+								<valueString value="resource"/>
+							</extension>
+							<extension url="value">
+								<valueString value="OperationOutcome"/>
+							</extension>
+						</extension>
+					</extension>
+				</extension>
+				<description value="Complex ruleset assertion to conditionally validate expected HTTP Headers and payload."/>
+				<direction value="response"/>
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+	</test>
+</TestScript>

@@ -21,10 +21,10 @@
       "base": "StructureDefinition-testscript-assert-ruleset.html",
       "source": "structuredefinition-testscript-assert-ruleset.xml"
     },
-    "StructureDefinition/ts-testing-testscript": {
-      "defns": "StructureDefinition-ts-testing-testscript-definitions.html",
-      "base": "StructureDefinition-ts-testing-testscript.html",
-      "source": "structuredefinition-ts-testing-testscript.xml"
+    "StructureDefinition/touchstone-testing-testscript": {
+      "defns": "StructureDefinition-touchstone-testing-testscript-definitions.html",
+      "base": "StructureDefinition-touchstone-testing-testscript.html",
+      "source": "structuredefinition-touchstone-testing-testscript.xml"
     },
     "TestScript/patient-read-summary-rule-no-param-json": {
       "base": "TestScript-patient-read-summary-rule-no-param-json.html",
@@ -37,22 +37,26 @@
     "TestScript/patient-read-versioning-ruleset-json": {
       "base": "TestScript-patient-read-versioning-ruleset-json.html",
       "source": "patient-read-versioning-ruleset-json.xml"
+    },
+    "TestScript/patient-read-notfound-ruleset-with-param-json": {
+      "base": "TestScript-patient-read-notfound-ruleset-with-param-json.html",
+      "source": "patient-read-notfound-ruleset-with-param-json.xml"
     }
   },
   "source": "ig.xml",
   "topofpage": "true",
   "jurisdiction": "US",
   "allviews": "true",
-  "fixed-business-version": "0.1.0",
+  "fixed-business-version": "1.0.0",
   "title": "Touchstone Testing",
   "npm-name": "net.aegis.touchstone.fhir.testing",
   "igtemplate-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",
   "canonicalBase": "http://touchstone.aegis.net/fhir/testing",
-  "name": "TSTesting",
+  "name": "Touchstone-Testing",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "html-template": "html-template.html",
   "license": "CC0-1.0",
-  "version": "3.6.0",
+  "version": "4.0.0",
   "logging": [
     "progress"
   ],
