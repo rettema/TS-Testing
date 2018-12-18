@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="touchstone-testing-testscript"/>
-	<url value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/touchstone-testing-testscript"/>
+	<id value="testscript"/>
+	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
 	<version value="1.0.0"/>
 	<name value="AEGISTouchstoneTestingTestScriptProfile"/>
 	<title value="AEGIS Touchstone Testing TestScript Profile"/>
@@ -41,7 +41,7 @@
 			<max value="*"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-rule"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -53,7 +53,7 @@
 			<max value="*"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-ruleset"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -65,7 +65,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-rule"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -77,7 +77,7 @@
 			<max value="1"/>
 			<type>
 				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>

@@ -17,7 +17,7 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
   }],
-  "url" : "http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig",
+  "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/ig",
   "version" : "1.0.0",
   "name" : "TouchstoneTesting",
   "title" : "Touchstone Testing",
@@ -30,7 +30,7 @@
     }]
   }],
   "copyright" : "Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License",
-  "packageId" : "net.aegis.touchstone.fhir.testing",
+  "packageId" : "net.aegis.touchstone.touchstone.fhir.testing",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
@@ -61,7 +61,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/touchstone-testing-testscript"
+        "reference" : "StructureDefinition/testscript"
       },
       "exampleBoolean" : false
     },

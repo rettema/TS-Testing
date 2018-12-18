@@ -2,9 +2,9 @@
 <TestScript xmlns="http://hl7.org/fhir">
 	<id value="patient-read-summary-rule-with-param-json" />
 	<meta>
-		<profile value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/touchstone-testing-testscript"/>
+		<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
 	</meta>
-	<extension url="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-rule">
+	<extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule">
 		<extension url="ruleId">
 			<valueId value="RuleContentTypeIfBody"/>
 		</extension>
@@ -36,7 +36,7 @@
 			</extension>
 		</extension>
 	</extension>
-	<url value="http://touchstone.aegis.net/fhir/testing/TestScript/patient-read-summary-rule-with-param-json" />
+	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-summary-rule-with-param-json" />
 	<name value="PatientReadSummaryRuleWithParamJson" />
 	<status value="active" />
 	<date value="2018-12-14" />
@@ -84,7 +84,7 @@
 		</action>
 		<action>
 			<assert>
-				<extension url="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-rule">
+				<extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule">
 					<extension url="ruleId">
 						<valueId value="RuleContentTypeIfBody"/>
 					</extension>

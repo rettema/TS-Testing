@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="testscript-assert-rule"/>
-	<url value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-rule"/>
+	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
 	<version value="1.0.0"/>
 	<name value="AEGISTouchstoneTestingTestScriptAssertRuleExtension"/>
 	<title value="AEGIS Touchstone Testing TestScript Assert Rule Extension"/>
@@ -159,7 +159,7 @@
 			<path value="Extension.url"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedUri value="http://touchstone.aegis.net/fhir/testing/StructureDefinition/testscript-assert-rule"/>
+			<fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
 		</element>
 		<element id="Extension.value[x]">
 			<path value="Extension.value[x]"/> 

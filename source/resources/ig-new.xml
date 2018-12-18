@@ -14,7 +14,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\pages"/>
   </extension>
-  <url value="http://touchstone.aegis.net/fhir/testing/ImplementationGuide/ig"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/ig"/>
   <version value="1.0.0"/>
   <name value="TouchstoneTesting"/>
   <title value="Touchstone Testing"/>
@@ -27,7 +27,7 @@
     </coding>
   </jurisdiction>
   <copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
-  <packageId value="net.aegis.touchstone.fhir.testing"/>
+  <packageId value="net.aegis.touchstone.touchstone.fhir.testing"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <fhirVersion value="4.0.0"/>
@@ -58,7 +58,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/touchstone-testing-testscript"/>
+        <reference value="StructureDefinition/testscript"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
