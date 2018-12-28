@@ -15,19 +15,3 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "none"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known; The code provided (#none) is not  valid in the value set Mime Types"
-}
--------------------------------------------------------------------------------------
