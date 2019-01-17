@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="testscript"/>
+	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+	<version value="1.0.0"/>
+	<name value="AEGISTouchstoneTestingTestScriptProfile"/>
+	<title value="AEGIS Touchstone Testing TestScript Profile"/>
+	<status value="active"/>
+	<date value="2018-12-14"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.aegis.net"/>
+		</telecom>
+	</contact>
+	<description value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
+	<fhirVersion value="4.0.0"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="TestScript"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/TestScript"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="TestScript">
+			<path value="TestScript"/>
+			<short value="Touchstone Testing TestScript Profile"/>
+			<definition value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="TestScript.extension:testscript-rule">
+			<path value="TestScript.extension"/>
+			<sliceName value="testscript-rule"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="TestScript.extension:testscript-ruleset">
+			<path value="TestScript.extension"/>
+			<sliceName value="testscript-ruleset"/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="TestScript.setup.action.assert.extension:testscript-assert-rule">
+			<path value="TestScript.setup.action.assert.extension"/>
+			<sliceName value="testscript-assert-rule"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="TestScript.setup.action.assert.extension:testscript-assert-ruleset">
+			<path value="TestScript.setup.action.assert.extension"/>
+			<sliceName value="testscript-assert-ruleset"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="TestScript.setup.action.operation">
+			<path value="TestScript.setup.action.operation"/>
+			<short value="The setup operation to perform"/>
+			<definition value="The operation to perform."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="BackboneElement"/>
+			</type>
+			<constraint>
+				<key value="tst-7"/>
+				<severity value="error"/>
+				<human value="Setup operation SHALL contain either sourceId or targetId or params or url."/>
+				<expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in (&#39;capabilities&#39; |&#39;search&#39; | &#39;transaction&#39; | &#39;history&#39;)) or (type.system.exists() and type.system != &#39;http://hl7.org/fhir/testscript-operation-codes&#39;)"/>
+				<xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value=&#39;capabilities&#39; or f:type/f:code/@value=&#39;search&#39; or f:type/f:code/@value=&#39;transaction&#39; or f:type/f:code/@value=&#39;history&#39;)"/>
+			</constraint>
+		</element>
+		<element id="TestScript.test.action.operation">
+			<path value="TestScript.test.action.operation"/>
+			<short value="The test operation to perform"/>
+			<definition value="An operation would involve a REST request to a server."/>
+			<min value="0"/>
+			<max value="1"/>
+			<contentReference value="#TestScript.setup.action.operation"/>
+			<constraint>
+				<key value="tst-8"/>
+				<severity value="error"/>
+				<human value="Setup operation SHALL contain either sourceId or targetId or params or url."/>
+				<expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in (&#39;capabilities&#39; |&#39;search&#39; | &#39;transaction&#39; | &#39;history&#39;)) or (type.system.exists() and type.system != &#39;http://hl7.org/fhir/testscript-operation-codes&#39;)"/>
+				<xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value=&#39;capabilities&#39; or f:type/f:code/@value=&#39;search&#39; or f:type/f:code/@value=&#39;transaction&#39; or f:type/f:code/@value=&#39;history&#39;)"/>
+			</constraint>
+		</element>
+		<element id="TestScript.teardown.action.operation">
+			<path value="TestScript.teardown.action.operation"/>
+			<short value="The teardown operation to perform"/>
+			<definition value="An operation would involve a REST request to a server."/>
+			<min value="0"/>
+			<max value="1"/>
+			<contentReference value="#TestScript.setup.action.operation"/>
+			<constraint>
+				<key value="tst-9"/>
+				<severity value="error"/>
+				<human value="Setup operation SHALL contain either sourceId or targetId or params or url."/>
+				<expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in (&#39;capabilities&#39; |&#39;search&#39; | &#39;transaction&#39; | &#39;history&#39;)) or (type.system.exists() and type.system != &#39;http://hl7.org/fhir/testscript-operation-codes&#39;)"/>
+				<xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value=&#39;capabilities&#39; or f:type/f:code/@value=&#39;search&#39; or f:type/f:code/@value=&#39;transaction&#39; or f:type/f:code/@value=&#39;history&#39;)"/>
+			</constraint>
+		</element>
+	</differential>
+</StructureDefinition>

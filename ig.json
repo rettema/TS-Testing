@@ -103,7 +103,7 @@
       "framework",
       "source/pages"
     ],
-    "specification": "http://build.fhir.org",
+    "specification": "http://hl7.org/fhir/R4",
     "output": "output",
     "qa": "generated_output/qa",
     "txCache": "generated_output/txCache",
