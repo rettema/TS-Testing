@@ -16,7 +16,7 @@
 	</contact>
 	<description value="Formal definitions of Touchstone TestScript ruleset extensions"/>
 	<purpose value="TestScript ruleset definition used as asserts within the TestScript. The ruleset must define the external reference to the ruleset structure file."/>
-	<fhirVersion value="4.0.0"/>
+	<fhirVersion value="4.0.1"/>
 	<mapping>
 		<identity value="rim"/>
 		<uri value="http://hl7.org/v3"/>

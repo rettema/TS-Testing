@@ -58,13 +58,21 @@ topofpage: True
   {% capture my-include %}{% include {{[id]}}.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
 <!-- ============OperationDefinition CONTENT CONTENT=============== -->
 
+{% when 'TestScript' %}
+<!-- ============TestScript CONTENT CONTENT=============== -->
+
+  {% capture my-include %}{% include {{[id]}}.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
+
+  {% include {{[type]}}-{{[name]}}.xhtml %}
+<!-- ============TestScript CONTENT CONTENT=============== -->
+
 {% else %}
 <!-- ============CodeSystem ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
   <h2>{{[type]}}: {{[id]}}</h2>
 
   {% include {{[type]}}-{{[name]}}.xhtml %}
-  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+  <!-- ============CodeSystem ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
 {% endcase %}
 

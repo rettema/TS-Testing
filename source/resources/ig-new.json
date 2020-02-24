@@ -23,6 +23,12 @@
   "title" : "Touchstone Testing",
   "status" : "active",
   "publisher" : "AEGIS.net, Inc.",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.aegis.net/index.html"
+    }]
+  }],
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -32,8 +38,8 @@
   "copyright" : "Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License",
   "packageId" : "net.aegis.touchstone.touchstone.fhir.testing",
   "license" : "CC0-1.0",
-  "fhirVersion" : ["4.0.0",
-  "4.0.0"],
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
   "definition" : {
     "resource" : [{
       "reference" : {
@@ -103,16 +109,12 @@
       "value" : "html-template.html"
     },
     {
-      "code" : "generate-json",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "xml"
     },
     {
-      "code" : "generate-xml",
-      "value" : "true"
-    },
-    {
-      "code" : "generate-turtle",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "JSON"
     }]
   }
 }

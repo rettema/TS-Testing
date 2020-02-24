@@ -15,7 +15,7 @@
 		</telecom>
 	</contact>
 	<description value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
-	<fhirVersion value="4.0.0"/>
+	<fhirVersion value="4.0.1"/>
 	<mapping>
 		<identity value="rim"/>
 		<uri value="http://hl7.org/v3"/>

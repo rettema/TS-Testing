@@ -47,7 +47,7 @@
 
 <!-- hl7 logo -->
     <a no-external="true" href="http://hl7.org/fhir">
-      <img alt="FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png"/>
+      <img alt="FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" height="60" width="249"/>
     </a>
 <!-- end hl7 logo -->
 
@@ -59,11 +59,12 @@
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
-      {% if {{site.data.fhir.ig.status}} == 'draft' %}
-      <strong>{{site.data.fhir.igName}} Implementation Guide CI Build</strong>
-      {% else %}
-      <strong>{{site.data.fhir.igName}} Implementation Guide Release {{site.data.fhir.ig.version}}</strong>
-      {% endif %}
+        <strong>{{ site.title }}</strong>
+        {% if {{site.build}} == "ci" %}
+        CI Build
+        {% elsif {{site.build}} == "ballot" %}
+        (Release {{ site.data.fhir.ig.version }} Ballot {{site.ballot}})
+        {% endif %}
 
     </div><!-- end ig title text -->
 
