@@ -1,87 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Hidden IG for de facto IG publishing-->
+
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-	<id value="ig"/>
-	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/ig"/>
-	<version value="1.0.0"/>
-	<name value="TouchstoneTesting"/>
-	<title value="Touchstone Testing"/>
-	<status value="active"/>
-	<publisher value="AEGIS.net, Inc."/>
-	<contact>
-		<!-- 0..* ContactDetail Contact details for the publisher -->
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.aegis.net/index.html"/>
-		</telecom>
-	</contact>
-	<copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
-	<!-- 0..1 Use and/or publishing restrictions -->
-	<packageId value="net.aegis.touchstone.fhir.testing"/>
-	<!-- 0..1 NPM Package name for IG -->
-	<license value="CC0-1.0"/>
-	<!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
-	<fhirVersion value="4.0.1"/>
-	<!-- 0..1 FHIR Version this Implementation Guide targets -->
-	<definition>
-		<!--  <grouping> -->
-		<!-- 0..* Grouping used to present related resources in the IG -->
-		<!--   <name value="[string]"/> -->
-		<!-- 1..1 Descriptive name for the package -->
-		<!--   <description value="[string]"/> -->
-		<!-- 0..1 Human readable text describing the package -->
-		<!-- </grouping> -->
-		<!-- <resource><reference><reference value="[type]/[id]"/></reference><name value="Test Example"/><description value="A test example to show how a implementation guide works"/><exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/></resource>   -->
-		<!-- insert resources -->
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/testscript-rule"/></reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/testscript-ruleset"/></reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/testscript-assert-rule"/></reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/testscript-assert-ruleset"/></reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="StructureDefinition/testscript"/></reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="TestScript/patient-read-summary-rule-no-param-json"/></reference>
-			<exampleBoolean value="true"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="TestScript/patient-read-summary-rule-with-param-json"/></reference>
-			<exampleBoolean value="true"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="TestScript/patient-read-versioning-ruleset-json"/></reference>
-			<exampleBoolean value="true"/>
-		</resource>
-		<resource>
-			<reference>
-				<reference value="TestScript/patient-read-notfound-ruleset-with-param-json"/></reference>
-			<exampleBoolean value="true"/>
-		</resource>
-		<page>
-			<nameUrl value="index.md"/>
-			<title value="AEGIS Touchstone Testing Homepage"/>
-			<generation value="markdown"/>
-		</page>
-	</definition>
+  <id value="net.aegis.touchstone.touchstone.fhir.testing"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing"/>
+  <version value="1.0.0"/>
+  <name value="TouchstoneTesting"/>
+  <title value="Touchstone Testing"/>
+  <status value="active"/>
+  <date value="2020-08-27T17:07:17-04:00"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net/index.html"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
+  <packageId value="net.aegis.touchstone.fhir.testing"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/codesystem-testscript-operation-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-testscript-operation-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-rule"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-ruleset"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-compareToValue"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-rule"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-ruleset"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-stopTestOnFail"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-operation-oauth2AuthzRedirectId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-variable-paramField"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/oauth2-standalone-launch"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-stopTestOnFail-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-summary-rule-no-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-summary-rule-with-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-versioning-ruleset-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-notfound-ruleset-with-param-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="index.md"/>
+      <title value="AEGIS Touchstone Testing Homepage"/>
+      <generation value="markdown"/>
+    </page>
+  </definition>
 </ImplementationGuide>

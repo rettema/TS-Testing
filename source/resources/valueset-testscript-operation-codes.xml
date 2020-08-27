@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-testscript-operation-codes"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-operation-codes"/>
+  <version value="1.0.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptOperationCodesValueSet"/>
+  <title value="AEGIS Touchstone Testing TestScript TestScript Operation Codes ValueSet"/>
+  <status value="active"/>
+  <date value="2020-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="The&#xA0;AEGIS Touchstone Testing TestScript Operation Codes Codes&#xA0;defines a set of codes that are used to indicate the supported operations of a testing engine or tool."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="For TestScript authors to identify the allowed set of operation code values."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+    </include>
+    <include>
+      <system value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,6 +1,14 @@
 {
   "do-transforms": "false",
   "resources": {
+    "CodeSystem/codesystem-testscript-operation-codes": {
+      "source": "codesystem-testscript-operation-codes.xml",
+      "base": "CodeSystem-codesystem-testscript-operation-codes.html"
+    },
+    "ValueSet/valueset-testscript-operation-codes": {
+      "source": "valueset-testscript-operation-codes.xml",
+      "base": "ValueSet-valueset-testscript-operation-codes.html"
+    },
     "StructureDefinition/testscript-rule": {
       "defns": "StructureDefinition-testscript-rule-definitions.html",
       "base": "StructureDefinition-testscript-rule.html",
@@ -10,6 +18,11 @@
       "defns": "StructureDefinition-testscript-ruleset-definitions.html",
       "base": "StructureDefinition-testscript-ruleset.html",
       "source": "structuredefinition-testscript-ruleset.xml"
+    },
+    "StructureDefinition/testscript-assert-compareToValue": {
+      "defns": "StructureDefinition-testscript-assert-compareToValue-definitions.html",
+      "base": "StructureDefinition-testscript-assert-compareToValue.html",
+      "source": "structuredefinition-testscript-assert-compareToValue.xml"
     },
     "StructureDefinition/testscript-assert-rule": {
       "defns": "StructureDefinition-testscript-assert-rule-definitions.html",
@@ -21,10 +34,38 @@
       "base": "StructureDefinition-testscript-assert-ruleset.html",
       "source": "structuredefinition-testscript-assert-ruleset.xml"
     },
+    "StructureDefinition/testscript-assert-stopTestOnFail": {
+      "defns": "StructureDefinition-testscript-assert-stopTestOnFail-definitions.html",
+      "base": "StructureDefinition-testscript-assert-stopTestOnFail.html",
+      "source": "structuredefinition-testscript-assert-stopTestOnFail.xml"
+    },
+    "StructureDefinition/testscript-operation-oauth2AuthzRedirectId": {
+      "defns": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId-definitions.html",
+      "base": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId.html",
+      "source": "structuredefinition-testscript-operation-oauth2AuthzRedirectId.xml"
+    },
+    "StructureDefinition/testscript-operation-oauth2AuthzRequestId": {
+      "defns": "StructureDefinition-testscript-operation-oauth2AuthzRequestId-definitions.html",
+      "base": "StructureDefinition-testscript-operation-oauth2AuthzRequestId.html",
+      "source": "structuredefinition-testscript-operation-oauth2AuthzRequestId.xml"
+    },
+    "StructureDefinition/testscript-variable-paramField": {
+      "defns": "StructureDefinition-testscript-variable-paramField-definitions.html",
+      "base": "StructureDefinition-testscript-variable-paramField.html",
+      "source": "structuredefinition-testscript-variable-paramField.xml"
+    },
     "StructureDefinition/testscript": {
       "defns": "StructureDefinition-testscript-definitions.html",
       "base": "StructureDefinition-testscript.html",
       "source": "structuredefinition-testscript.xml"
+    },
+    "TestScript/oauth2-standalone-launch": {
+      "base": "TestScript-oauth2-standalone-launch.html",
+      "source": "oauth2-standalone-launch.xml"
+    },
+    "TestScript/patient-read-stopTestOnFail-json": {
+      "base": "TestScript-patient-read-stopTestOnFail-json.html",
+      "source": "patient-read-stopTestOnFail-json.xml"
     },
     "TestScript/patient-read-summary-rule-no-param-json": {
       "base": "TestScript-patient-read-summary-rule-no-param-json.html",
@@ -114,7 +155,7 @@
     ]
   },
   "working-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",
-  "status": "draft",
+  "status": "active",
   "swagger": [
     {
       "mode": "single",

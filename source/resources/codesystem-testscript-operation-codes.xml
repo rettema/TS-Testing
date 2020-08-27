@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="codesystem-testscript-operation-codes"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
+  <version value="1.0.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptOperationCodes"/>
+  <title value="AEGIS Touchstone Testing TestScript Operation Codes"/>
+  <status value="active"/>
+  <date value="2020-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="This value set defines a set of codes that are used to indicate the extended supported operations of a testing engine or tool."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="get"/>
+    <display value="Get"/>
+    <definition value="Perform a simple HTTP GET method."/>
+  </concept>
+  <concept>
+    <code value="oauth2-authorize"/>
+    <display value="OAuth2 Authorize"/>
+    <definition value="OAuth2 auth endpoint."/>
+  </concept>
+  <concept>
+    <code value="oauth2-client-registration"/>
+    <display value="OAuth2 Client Registration"/>
+    <definition value="OAuth2 register endpoint."/>
+  </concept>
+  <concept>
+    <code value="oauth2-get-token"/>
+    <display value="OAuth2 Get Token"/>
+    <definition value="OAuth2 token endpoint."/>
+  </concept>
+  <concept>
+    <code value="oauth2-refresh-token"/>
+    <display value="OAuth2 Refresh Token"/>
+    <definition value="OAuth2 refresh endpoint."/>
+  </concept>
+  <concept>
+    <code value="oauth2-revoke-token"/>
+    <display value="OAuth2 Revoke Token"/>
+    <definition value="OAuth2 revoke endpoint."/>
+  </concept>
+  <concept>
+    <code value="smart-launch"/>
+    <display value="SMART on FHIR Launch"/>
+    <definition value="SMART on FHIR Launch."/>
+  </concept>
+</CodeSystem>

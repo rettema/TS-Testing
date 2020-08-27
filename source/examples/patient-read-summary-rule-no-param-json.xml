@@ -1,98 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <TestScript xmlns="http://hl7.org/fhir">
-	<id value="patient-read-summary-rule-no-param-json" />
-	<meta>
-		<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
-	</meta>
-	<extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule">
-		<extension url="ruleId">
-			<valueId value="RulePatientSummaryTrue"/>
-		</extension>
-		<extension url="path">
-			<valueString value="../_reference/rule/PatientSummaryTrue.groovy"/>
-		</extension>
-	</extension>
-	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-summary-rule-no-param-json" />
-	<name value="PatientReadSummaryRuleNoParamJson" />
-	<status value="active" />
-	<date value="2018-12-14" />
-	<publisher value="AEGIS.net, Inc." />
-	<contact>
-		<name value="Touchstone Support" />
-		<telecom>
-			<system value="email" />
-			<value value="Touchstone_Support@aegis.net" />
-			<use value="work" />
-		</telecom>
-	</contact>
-	<description value="Demonstrate the use of the AEGIS Touchstone Testing IG rule extensions (no params) with a Patient read. The actual test is a read operation for a Patient in JSON format with the _summary=true parameter where the rule allows a single assert to test the entire returned Patient resource contents." />
-	<copyright value="(c) AEGIS.net, Inc. 2015+" />
-	<profile id="patient-profile">
-		<reference value="http://hl7.org/fhir/StructureDefinition/Patient" />
-	</profile>
-	<variable>
-		<name value="patientResourceId" />
-		<hint value="Enter a known Patient resource id" />
-	</variable>
-	<test id="PatientReadSummaryRuleNoParam">
-		<name value="PatientReadSummaryRuleNoParam" />
-		<description value="Read a known Patient in JSON format. The expected response code is 200 (OK). The expected response payload is the Patient resource with only the allowed summary elements in JSON format." />
-		<action>
-			<operation>
-				<type>
-					<system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes" />
-					<code value="read" />
-				</type>
-				<resource value="Patient" />
-				<description value="Read the created Patient. The destination server must support the _summary=true parameter." />
-				<accept value="json" />
-				<encodeRequestUrl value="false" />
-				<params value="/${patientResourceId}?_summary=true" />
-			</operation>
-		</action>
-		<action>
-			<assert>
-				<description value="Confirm that the returned HTTP status is 200(OK)." />
-				<direction value="response" />
-				<response value="okay" />
-				<warningOnly value="false" />
-			</assert>
-		</action>
-		<action>
-			<assert>
-				<description value="Confirm that the returned format is JSON." />
-				<direction value="response" />
-				<contentType value="json" />
-				<warningOnly value="false" />
-			</assert>
-		</action>
-		<action>
-			<assert>
-				<description value="Confirm that the returned resource type is Patient." />
-				<direction value="response" />
-				<resource value="Patient" />
-				<warningOnly value="false" />
-			</assert>
-		</action>
-		<action>
-			<assert>
-				<description value="Validate that the returned resource conforms to the base FHIR Patient profile." />
-				<direction value="response" />
-				<validateProfileId value="patient-profile" />
-				<warningOnly value="false" />
-			</assert>
-		</action>
-		<action>
-			<assert>
-				<extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule">
-					<extension url="ruleId">
-						<valueId value="RulePatientSummaryTrue"/>
-					</extension>
-				</extension>
-				<description value="Complex rule assertion to evaluate returned Patient and determine if any non-summary elements were returned." />
-				<direction value="response" />
-				<warningOnly value="false" />
-			</assert>
-		</action>
-	</test>
+  <id value="patient-read-summary-rule-no-param-json"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule">
+    <extension url="ruleId">
+      <valueId value="RulePatientSummaryTrue"/>
+    </extension>
+    <extension url="path">
+      <valueString value="../_reference/rule/PatientSummaryTrue.groovy"/>
+    </extension>
+  </extension>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-summary-rule-no-param-json"/>
+  <version value="1.0.0"/>
+  <name value="PatientReadSummaryRuleNoParamJson"/>
+  <status value="active"/>
+  <date value="2020-05-29"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <name value="Touchstone Support"/>
+    <telecom>
+      <system value="email"/>
+      <value value="Touchstone_Support@aegis.net"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Demonstrate the use of the AEGIS Touchstone Testing IG rule extensions (no params) with a Patient read. The actual test is a read operation for a Patient in JSON format with the _summary=true parameter where the rule allows a single assert to test the entire returned Patient resource contents."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="(c) AEGIS.net, Inc. 2015+"/>
+  <profile id="patient-profile">
+    <reference value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+  </profile>
+  <variable>
+    <name value="patientResourceId"/>
+    <hint value="Enter a known Patient resource id"/>
+  </variable>
+  <test id="PatientReadSummaryRuleNoParam">
+    <name value="PatientReadSummaryRuleNoParam"/>
+    <description value="Read a known Patient in JSON format. The expected response code is 200 (OK). The expected response payload is the Patient resource with only the allowed summary elements in JSON format."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="read"/>
+        </type>
+        <resource value="Patient"/>
+        <description value="Read the created Patient. The destination server must support the _summary=true parameter."/>
+        <accept value="json"/>
+        <encodeRequestUrl value="false"/>
+        <params value="/${patientResourceId}?_summary=true"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="Confirm that the returned HTTP status is 200(OK)."/>
+        <direction value="response"/>
+        <response value="okay"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="Confirm that the returned format is JSON."/>
+        <direction value="response"/>
+        <contentType value="json"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="true"/>
+        </extension>
+        <description value="Confirm that the returned resource type is Patient."/>
+        <direction value="response"/>
+        <resource value="Patient"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="Validate that the returned resource conforms to the base FHIR Patient profile."/>
+        <direction value="response"/>
+        <validateProfileId value="patient-profile"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule">
+          <extension url="ruleId">
+            <valueId value="RulePatientSummaryTrue"/>
+          </extension>
+        </extension>
+        <description value="Complex rule assertion to evaluate returned Patient and determine if any non-summary elements were returned."/>
+        <direction value="response"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
 </TestScript>

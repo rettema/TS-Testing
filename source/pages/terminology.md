@@ -8,12 +8,22 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 ## Value Sets
 
-No value sets have been defined for this implementation guide.
+These value sets have been defined for this implementation guide.
+
+<!-- {% raw %}{% include list-simple-valuesets.xhtml %}{% endraw %} -->
+
+<li><a href="ValueSet-valueset-testscript-operation-codes.html">TestScript Operation Codes ValueSet</a></li>
 
 <br />
 
 ## Code Systems
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of codes system names used in FHIR.
+
+**Code systems published in this IG** - Includes AEGIS Touchstone Testing defined code systems and externally defined code systems
+
+<!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
+
+<li><a href="CodeSystem-codesystem-testscript-operation-codes.html">TestScript Operation Codes Codes</a></li>
 
 <br />

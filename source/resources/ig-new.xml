@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ig"/>
+  <id value="net.aegis.touchstone.touchstone.fhir.testing"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\resources"/>
   </extension>
@@ -14,11 +14,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\pages"/>
   </extension>
-  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/ig"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing"/>
   <version value="1.0.0"/>
   <name value="TouchstoneTesting"/>
   <title value="Touchstone Testing"/>
   <status value="active"/>
+  <date value="2020-08-27T17:07:17-04:00"/>
   <publisher value="AEGIS.net, Inc."/>
   <contact>
     <telecom>
@@ -40,6 +41,18 @@
   <definition>
     <resource>
       <reference>
+        <reference value="CodeSystem/codesystem-testscript-operation-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-testscript-operation-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/testscript-rule"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -47,6 +60,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/testscript-ruleset"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-assert-compareToValue"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -64,9 +83,45 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/testscript-assert-stopTestOnFail"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-operation-oauth2AuthzRedirectId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-variable-paramField"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/testscript"/>
       </reference>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/oauth2-standalone-launch"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/patient-read-stopTestOnFail-json"/>
+      </reference>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>

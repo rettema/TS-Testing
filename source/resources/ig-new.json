@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ig",
+  "id" : "net.aegis.touchstone.touchstone.fhir.testing",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\resources"
@@ -17,11 +17,12 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
   }],
-  "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/ig",
+  "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing",
   "version" : "1.0.0",
   "name" : "TouchstoneTesting",
   "title" : "Touchstone Testing",
   "status" : "active",
+  "date" : "2020-08-27T17:07:17-04:00",
   "publisher" : "AEGIS.net, Inc.",
   "contact" : [{
     "telecom" : [{
@@ -43,6 +44,18 @@
   "definition" : {
     "resource" : [{
       "reference" : {
+        "reference" : "CodeSystem/codesystem-testscript-operation-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/valueset-testscript-operation-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/testscript-rule"
       },
       "exampleBoolean" : false
@@ -50,6 +63,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/testscript-ruleset"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-assert-compareToValue"
       },
       "exampleBoolean" : false
     },
@@ -67,9 +86,45 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/testscript-assert-stopTestOnFail"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-operation-oauth2AuthzRedirectId"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-operation-oauth2AuthzRequestId"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-variable-paramField"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/testscript"
       },
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/oauth2-standalone-launch"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/patient-read-stopTestOnFail-json"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {

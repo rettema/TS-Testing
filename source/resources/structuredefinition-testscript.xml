@@ -1,86 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="testscript"/>
-	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
-	<version value="1.0.0"/>
-	<name value="AEGISTouchstoneTestingTestScriptProfile"/>
-	<title value="AEGIS Touchstone Testing TestScript Profile"/>
-	<status value="active"/>
-	<date value="2018-12-14"/>
-	<publisher value="AEGIS.net, Inc."/>
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.aegis.net"/>
-		</telecom>
-	</contact>
-	<description value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
-	<fhirVersion value="4.0.1"/>
-	<mapping>
-		<identity value="rim"/>
-		<uri value="http://hl7.org/v3"/>
-		<name value="RIM Mapping"/>
-	</mapping>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="TestScript"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/TestScript"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="TestScript">
-			<path value="TestScript"/>
-			<short value="Touchstone Testing TestScript Profile"/>
-			<definition value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
-			<mustSupport value="false"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="TestScript.extension:testscript-rule">
-			<path value="TestScript.extension"/>
-			<sliceName value="testscript-rule"/>
-			<min value="0"/>
-			<max value="*"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="TestScript.extension:testscript-ruleset">
-			<path value="TestScript.extension"/>
-			<sliceName value="testscript-ruleset"/>
-			<min value="0"/>
-			<max value="*"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="TestScript.setup.action.assert.extension:testscript-assert-rule">
-			<path value="TestScript.setup.action.assert.extension"/>
-			<sliceName value="testscript-assert-rule"/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="TestScript.setup.action.assert.extension:testscript-assert-ruleset">
-			<path value="TestScript.setup.action.assert.extension"/>
-			<sliceName value="testscript-assert-ruleset"/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-	</differential>
+  <id value="testscript"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  <version value="1.0.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptProfile"/>
+  <title value="AEGIS Touchstone Testing TestScript Profile"/>
+  <status value="active"/>
+  <date value="2018-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="workflow"/>
+    <uri value="http://hl7.org/fhir/workflow"/>
+    <name value="Workflow Pattern"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/fivews"/>
+    <name value="FiveWs Pattern Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="objimpl"/>
+    <uri value="http://hl7.org/fhir/object-implementation"/>
+    <name value="Object Implementation Information"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="TestScript"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/TestScript"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="TestScript">
+      <path value="TestScript"/>
+      <short value="Touchstone Testing TestScript Profile"/>
+      <definition value="Defines constraints and extensions on the TestScript resource for use in the Touchstone Testing Platform."/>
+      <mustSupport value="false"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.extension:testscript-rule">
+      <path value="TestScript.extension"/>
+      <sliceName value="testscript-rule"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.extension:testscript-ruleset">
+      <path value="TestScript.extension"/>
+      <sliceName value="testscript-ruleset"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.variable.extension:testscript-variable-paramField">
+      <path value="TestScript.variable.extension"/>
+      <sliceName value="testscript-variable-paramField"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.operation">
+      <path value="TestScript.setup.action.operation"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="TestScript.setup.action.operation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+    </element>
+    <element id="TestScript.setup.action.operation.id">
+      <path value="TestScript.setup.action.operation.id"/>
+      <representation value="xmlAttr"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+    </element>
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-oauth2AuthzRedirectId">
+      <path value="TestScript.setup.action.operation.extension"/>
+      <sliceName value="testscript-operation-oauth2AuthzRedirectId"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRedirectId"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-oauth2AuthzRequestId">
+      <path value="TestScript.setup.action.operation.extension"/>
+      <sliceName value="testscript-operation-oauth2AuthzRequestId"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.operation.type">
+      <path value="TestScript.setup.action.operation.type"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="TestScript.setup.action.operation.type"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="TestScriptOperationCode"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="The allowable operation code types."/>
+        <valueSet value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-operation-codes"/>
+      </binding>
+    </element>
+    <element id="TestScript.setup.action.assert.extension:testscript-assert-compareToValue">
+      <path value="TestScript.setup.action.assert.extension"/>
+      <sliceName value="testscript-assert-compareToValue"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.assert.extension:testscript-assert-rule">
+      <path value="TestScript.setup.action.assert.extension"/>
+      <sliceName value="testscript-assert-rule"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-rule"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.assert.extension:testscript-assert-ruleset">
+      <path value="TestScript.setup.action.assert.extension"/>
+      <sliceName value="testscript-assert-ruleset"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.assert.extension:testscript-assert-stopTestOnFail">
+      <path value="TestScript.setup.action.assert.extension"/>
+      <sliceName value="testscript-assert-stopTestOnFail"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+  </differential>
 </StructureDefinition>

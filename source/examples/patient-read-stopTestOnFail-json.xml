@@ -1,49 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <TestScript xmlns="http://hl7.org/fhir">
-  <id value="patient-read-versioning-ruleset-json"/>
+  <id value="patient-read-stopTestOnFail-json"/>
   <meta>
     <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
   </meta>
-  <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset">
-    <extension url="rulesetId">
-      <valueId value="RulesetPatientVersioning"/>
-    </extension>
-    <extension url="path">
-      <valueString value="../_reference/ruleset/RuleSet-VersioningHeaders-Groovy.xml"/>
-    </extension>
-    <extension url="rule">
-      <extension url="ruleId">
-        <valueId value="assertETagIfSupported"/>
-      </extension>
-      <extension url="param">
-        <extension url="name">
-          <valueString value="resource"/>
-        </extension>
-        <extension url="value">
-          <valueString value="Patient"/>
-        </extension>
-      </extension>
-    </extension>
-    <extension url="rule">
-      <extension url="ruleId">
-        <valueId value="assertLastModifiedIfSupported"/>
-      </extension>
-      <extension url="param">
-        <extension url="name">
-          <valueString value="resource"/>
-        </extension>
-        <extension url="value">
-          <valueString value="Patient"/>
-        </extension>
-      </extension>
-    </extension>
-  </extension>
-  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-versioning-ruleset-json"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-stopTestOnFail-json"/>
   <version value="1.0.0"/>
-  <name value="PatientReadVersioningRulesetJson"/>
+  <name value="PatientReadStopTestOnFailJson"/>
   <status value="active"/>
-  <date value="2020-05-29"/>
+  <date value="2020-08-27"/>
   <publisher value="AEGIS.net, Inc."/>
   <contact>
     <name value="Touchstone Support"/>
@@ -53,7 +19,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Demonstrate the use of a ruleset with a Patient read. The actual test is a read operation for a Patient in JSON format where a ruleset is used to conditionally check the system under test for versioning support and either skip or apply checks for required HTTP response headers."/>
+  <description value="Demonstrate the use of a Patient read and use of the new assert extension stopTestOnFail."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -65,13 +31,9 @@
   <profile id="patient-profile">
     <reference value="http://hl7.org/fhir/StructureDefinition/Patient"/>
   </profile>
-  <variable>
-    <name value="patientResourceId"/>
-    <hint value="Enter a known Patient resource id"/>
-  </variable>
-  <test id="PatientReadVersioningRuleset">
-    <name value="PatientReadVersioningRuleset"/>
-    <description value="Read the created Patient in JSON format. The expected response code is 200 (OK). The expected response payload is the Patient resource in JSON format."/>
+  <test id="PatientReadStopTestOnFail">
+    <name value="PatientReadStopTestOnFail"/>
+    <description value="Read a Patient in JSON format. The expected response code is 200 (Ok). The expected response payload is the read Patient resource in JSON format."/>
     <action>
       <operation>
         <type>
@@ -79,10 +41,10 @@
           <code value="read"/>
         </type>
         <resource value="Patient"/>
-        <description value="Read the created Patient. The destination server support of versioning will be conditionally evaluated."/>
+        <description value="Read a Patient."/>
         <accept value="json"/>
         <encodeRequestUrl value="false"/>
-        <params value="/${patientResourceId}"/>
+        <params value="/example"/>
       </operation>
     </action>
     <action>
@@ -90,9 +52,9 @@
         <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
           <valueBoolean value="false"/>
         </extension>
-        <description value="Confirm that the returned HTTP status is 200(OK)."/>
+        <description value="Confirm that the returned HTTP status is 200(Ok)."/>
         <direction value="response"/>
-        <response value="okay"/>
+        <responseCode value="200"/>
         <warningOnly value="false"/>
       </assert>
     </action>
@@ -126,18 +88,6 @@
         <description value="Validate that the returned resource conforms to the base FHIR Patient profile."/>
         <direction value="response"/>
         <validateProfileId value="patient-profile"/>
-        <warningOnly value="false"/>
-      </assert>
-    </action>
-    <action>
-      <assert>
-        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset">
-          <extension url="rulesetId">
-            <valueId value="RulesetPatientVersioning"/>
-          </extension>
-        </extension>
-        <description value="Complex ruleset assertion to conditionally validate expected versioning HTTP Headers."/>
-        <direction value="response"/>
         <warningOnly value="false"/>
       </assert>
     </action>

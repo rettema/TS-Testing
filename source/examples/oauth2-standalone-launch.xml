@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="oauth2-standalone-launch"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/oauth2-standalone-launch"/>
+  <version value="1.0.0"/>
+  <name value="OAuth2StandaloneLaunch"/>
+  <status value="active"/>
+  <date value="2020-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <name value="Touchstone Support"/>
+    <telecom>
+      <system value="email"/>
+      <value value="Touchstone_Support@aegis.net"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Demonstrate the use of the oauth2-autorize operation and the new extensions stopTestOnFail."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="(c) AEGIS.net, Inc. 2015+"/>
+  <variable>
+    <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField">
+      <valueString value="state"/>
+    </extension>
+    <name value="oauth2AuthzRequest1StateParam"/>
+    <sourceId value="oauth2AuthzRequest1"/>
+  </variable>
+  <variable>
+    <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField">
+      <valueString value="redirect_uri"/>
+    </extension>
+    <name value="oauth2AuthzRequest1RedirectUri"/>
+    <sourceId value="oauth2AuthzRequest1"/>
+  </variable>
+  <variable>
+    <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField">
+      <valueString value="code"/>
+    </extension>
+    <name value="oauth2AuthzRedirect1AuthCode"/>
+    <sourceId value="oauth2AuthzRedirect1"/>
+  </variable>
+  <variable>
+    <name value="authorizeEndpoint"/>
+    <defaultValue value="https://oauth2.aegis.net/auth"/>
+  </variable>
+  <variable>
+    <name value="oauth2AuthzRequestedScopes"/>
+    <defaultValue value="launch/patient openid fhirUser offline_access patient/Patient.read"/>
+  </variable>
+  <test id="StandaloneLaunchWithPatientScope">
+    <name value="Standalone Launch With Patient Scope"/>
+    <description value="Perform Standalone SMART launch sequence and test OpenID Connect and token refresh functionality."/>
+    <action>
+      <operation>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRequestId">
+          <valueId value="oauth2AuthzRequest1"/>
+        </extension>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRedirectId">
+          <valueId value="oauth2AuthzRedirect1"/>
+        </extension>
+        <type>
+          <system value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
+          <code value="oauth2-authorize"/>
+        </type>
+        <description value="Redirect user to the authorize endpoint for target test system specified in smart configuration"/>
+        <encodeRequestUrl value="false"/>
+        <url value="${authorizeEndpoint}?client_id=clientId&amp;scope=${oauth2AuthzRequestedScopes}"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="OAuth server redirects client browser to app redirect URI. Client browser redirected from OAuth server to redirect URI of client app as described in SMART authorization sequence."/>
+        <direction value="request"/>
+        <operator value="contains"/>
+        <requestURL value="/oauth2/authcode/redirect"/>
+        <sourceId value="oauth2AuthzRedirect1"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue">
+          <valueString value="https://oauth2.aegis.net/auth"/>
+        </extension>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="Direct comparison example."/>
+        <direction value="request"/>
+        <operator value="equals"/>
+        <value value="${authorizeEndpoint}"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="testscript-variable-paramField"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField"/>
+  <version value="1.0.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptVariableParamFieldExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Variable ParamField Extension"/>
+  <status value="active"/>
+  <date value="2020-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Formal definitions of Touchstone TestScript variable paramField extensions"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="TestScript variable paramField definition used within the TestScript. The paramField defines the url path parameter field name where the value will be extracted."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript.variable"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Fixture firstUsage used within the test script"/>
+      <definition value="TestScript fixture firstUsage definition used as asserts within the TestScript. The firstUsage boolean defines whether this is the first time the referenced fixture is used."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-variable-paramField"/>
+    </element>
+    <element id="Extension.valueString">
+      <path value="Extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

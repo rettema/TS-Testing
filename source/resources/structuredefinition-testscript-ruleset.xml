@@ -1,249 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="testscript-ruleset"/>
-	<url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
-	<version value="1.0.0"/>
-	<name value="AEGISTouchstoneTestingTestScriptRulesetExtension"/>
-	<title value="AEGIS Touchstone Testing TestScript Ruleset Extension"/>
-	<status value="active"/>
-	<date value="2018-12-14"/>
-	<publisher value="AEGIS.net, Inc."/>
-	<contact>
-		<telecom>
-			<system value="url"/>
-			<value value="http://www.aegis.net"/>
-		</telecom>
-	</contact>
-	<description value="Formal definitions of Touchstone TestScript ruleset extensions"/>
-	<purpose value="TestScript ruleset definition used as asserts within the TestScript. The ruleset must define the external reference to the ruleset structure file."/>
-	<fhirVersion value="4.0.1"/>
-	<mapping>
-		<identity value="rim"/>
-		<uri value="http://hl7.org/v3"/>
-		<name value="RIM Mapping"/>
-	</mapping>
-	<kind value="complex-type"/>
-	<abstract value="false"/>
-	<context>
-		<type value="element"/>
-		<expression value="TestScript"/>
-	</context>
-	<type value="Extension"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="Extension:testscript-ruleset">
-			<path value="Extension"/>
-			<short value="Assert ruleset used within the test script"/>
-			<definition value="TestScript ruleset definition used as asserts within the TestScript. The rule must define the external reference to the ruleset structure file."/>
-			<min value="0"/>
-			<max value="*"/>
-			<isModifier value="false"/>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rulesetId">
-			<path value="Extension.extension"/>
-			<sliceName value="rulesetId"/>
-			<short value="Assert ruleset unique id within TestScript"/>
-			<definition value="The identifier for this ruleset used in asserts."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rulesetId.url">
-			<path value="Extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="rulesetId"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rulesetId.valueId">
-			<path value="Extension.extension.valueId"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="id"/>
-			</type>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:path">
-			<path value="Extension.extension"/>
-			<sliceName value="path"/>
-			<short value="Ruleset location path"/>
-			<definition value="Absolute or relative location path to the ruleset definition."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:resource.url">
-			<path value="Extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="path"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:id.valueString">
-			<path value="Extension.extension.valueString"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule">
-			<path value="Extension.extension"/>
-			<sliceName value="rule"/>
-			<short value="The referenced rule within the ruleset"/>
-			<definition value="The referenced rule within the external ruleset template."/>
-			<min value="1"/>
-			<max value="*"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.extension:ruleId">
-			<path value="Extension.extension.extension"/>
-			<sliceName value="ruleId"/>
-			<short value="Rule unique id within ruleset"/>
-			<definition value="The identifier to a TestScript ruleset extension rule."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Extension:testscript-assert-rule.extension:ruleId.url">
-			<path value="Extension.extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="ruleId"/>
-		</element>
-		<element id="Extension:testscript-assert-rule.extension:ruleId.valueId">
-			<path value="Extension.extension.extension.valueId"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="id"/>
-			</type>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param">
-			<path value="Extension.extension.extension"/>
-			<sliceName value="param"/>
-			<short value="Rule parameter template"/>
-			<definition value="Each rule template can take one or more parameters for rule evaluation"/>
-			<min value="0"/>
-			<max value="*"/>
-			<isModifier value="false"/>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param.extension:name">
-			<path value="Extension.extension.extension.extension"/>
-			<sliceName value="name"/>
-			<short value="Parameter name matching external assert rule parameter"/>
-			<definition value="Descriptive name for this parameter that matches the external assert rule parameter name."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rule.extension:name.url">
-			<path value="Extension.extension.extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="name"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rule.extension:name.valueString">
-			<path value="Extension.extension.extension.extension.valueString"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param.extension:value">
-			<path value="Extension.extension.extension.extension"/>
-			<sliceName value="value"/>
-			<short value="Parameter value defined either explicitly or dynamically"/>
-			<definition value="The explicit or dynamic value for the parameter that will be passed on to the external rule template."/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param.extension:value.url">
-			<path value="Extension.extension.extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="value"/>
-		</element>
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param.extension:value.valueString">
-			<path value="Extension.extension.extension.extension.valueString"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="string"/>
-			</type>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.extension:param.url">
-			<path value="Extension.extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<fixedUri value="param"/>
-		</element>
-
-		<element id="Extension:testscript-ruleset.extension:rule.url">
-			<path value="Extension.extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<fixedUri value="rule"/>
-		</element>
-
-		<element id="Extension:testscript-ruleset.url">
-			<path value="Extension.url"/>
-			<min value="1"/>
-			<max value="1"/>
-			<fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
-		</element>
-		<element id="Extension.value[x]">
-			<path value="Extension.value[x]"/> 
-			<min value="0"/> 
-			<max value="0"/> 
-		</element>
-	</differential>
+  <id value="testscript-ruleset"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
+  <version value="1.0.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptRulesetExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Ruleset Extension"/>
+  <status value="active"/>
+  <date value="2018-12-14"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Formal definitions of Touchstone TestScript ruleset extensions"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="TestScript ruleset definition used as asserts within the TestScript. The ruleset must define the external reference to the ruleset structure file."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Assert ruleset used within the test script"/>
+      <definition value="TestScript ruleset definition used as asserts within the TestScript. The rule must define the external reference to the ruleset structure file."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rulesetId">
+      <path value="Extension.extension"/>
+      <sliceName value="rulesetId"/>
+      <short value="Assert ruleset unique id within TestScript"/>
+      <definition value="The identifier for this ruleset used in asserts."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rulesetId.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="rulesetId"/>
+    </element>
+    <element id="Extension.extension:rulesetId.valueId">
+      <path value="Extension.extension.valueId"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+    </element>
+    <element id="Extension.extension:path">
+      <path value="Extension.extension"/>
+      <sliceName value="path"/>
+      <short value="Ruleset location path"/>
+      <definition value="Absolute or relative location path to the ruleset definition."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:path.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="path"/>
+    </element>
+    <element id="Extension.extension:path.valueString">
+      <path value="Extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule">
+      <path value="Extension.extension"/>
+      <sliceName value="rule"/>
+      <short value="The referenced rule within the ruleset"/>
+      <definition value="The referenced rule within the external ruleset template."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:ruleId">
+      <path value="Extension.extension.extension"/>
+      <sliceName value="ruleId"/>
+      <short value="Rule unique id within ruleset"/>
+      <definition value="The identifier to a TestScript ruleset extension rule."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:ruleId.url">
+      <path value="Extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="ruleId"/>
+    </element>
+    <element id="Extension.extension:rule.extension:ruleId.valueId">
+      <path value="Extension.extension.extension.valueId"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:param">
+      <path value="Extension.extension.extension"/>
+      <sliceName value="param"/>
+      <short value="Rule parameter template"/>
+      <definition value="Each rule template can take one or more parameters for rule evaluation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:name">
+      <path value="Extension.extension.extension.extension"/>
+      <sliceName value="name"/>
+      <short value="Parameter name matching external assert rule parameter"/>
+      <definition value="Descriptive name for this parameter that matches the external assert rule parameter name."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:name.url">
+      <path value="Extension.extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="name"/>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:name.valueString">
+      <path value="Extension.extension.extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:value">
+      <path value="Extension.extension.extension.extension"/>
+      <sliceName value="value"/>
+      <short value="Parameter value defined either explicitly or dynamically"/>
+      <definition value="The explicit or dynamic value for the parameter that will be passed on to the external rule template."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:value.url">
+      <path value="Extension.extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="value"/>
+    </element>
+    <element id="Extension.extension:rule.extension:param.extension:value.valueString">
+      <path value="Extension.extension.extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:param.url">
+      <path value="Extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="param"/>
+    </element>
+    <element id="Extension.extension:rule.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="rule"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-ruleset"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+  </differential>
 </StructureDefinition>
