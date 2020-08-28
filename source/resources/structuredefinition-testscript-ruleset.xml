@@ -162,7 +162,7 @@
     </element>
     <element id="Extension.extension:rule.extension:param.extension:name">
       <path value="Extension.extension.extension.extension"/>
-      <sliceName value="name"/>
+      <sliceName value="paramName"/>
       <short value="Parameter name matching external assert rule parameter"/>
       <definition value="Descriptive name for this parameter that matches the external assert rule parameter name."/>
       <min value="1"/>
@@ -192,7 +192,7 @@
     </element>
     <element id="Extension.extension:rule.extension:param.extension:value">
       <path value="Extension.extension.extension.extension"/>
-      <sliceName value="value"/>
+      <sliceName value="paramValue"/>
       <short value="Parameter value defined either explicitly or dynamically"/>
       <definition value="The explicit or dynamic value for the parameter that will be passed on to the external rule template."/>
       <min value="1"/>
@@ -225,6 +225,111 @@
       <min value="1"/>
       <max value="1"/>
       <fixedUri value="param"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output">
+      <path value="Extension.extension.extension"/>
+      <sliceName value="output"/>
+      <short value="Rule output template"/>
+      <definition value="Each rule template can return one or more outputs for subsequent assert evaluation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:name">
+      <path value="Extension.extension.extension.extension"/>
+      <sliceName value="outputName"/>
+      <short value="Output name matching external assert rule output"/>
+      <definition value="Descriptive name for this output that matches the external assert rule output name."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:name.url">
+      <path value="Extension.extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="name"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:name.valueString">
+      <path value="Extension.extension.extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:type">
+      <path value="Extension.extension.extension.extension"/>
+      <sliceName value="outputType"/>
+      <short value="Output type value defined either explicitly or dynamically"/>
+      <definition value="The explicit or dynamic type value for the output that will be returned to the external rule template."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:type.url">
+      <path value="Extension.extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="type"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:type.valueString">
+      <path value="Extension.extension.extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:contentType">
+      <path value="Extension.extension.extension.extension"/>
+      <sliceName value="outputContentType"/>
+      <short value="contentType value defined either explicitly or dynamically"/>
+      <definition value="The explicit or dynamic contentType value for the output that will be returned to the external rule template."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:contentType.url">
+      <path value="Extension.extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="contentType"/>
+    </element>
+    <element id="Extension.extension:rule.extension:output.extension:contentType.valueString">
+      <path value="Extension.extension.extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:rule.extension:output.url">
+      <path value="Extension.extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="output"/>
     </element>
     <element id="Extension.extension:rule.url">
       <path value="Extension.extension.url"/>

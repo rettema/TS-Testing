@@ -16,7 +16,7 @@ active: terminology
 
 ## Introduction
 
-The AEGIS Touchstone Testing Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for processing of optional external Rules Engine logic.  
+The AEGIS Touchstone Testing Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for processing of optional extensions to the TestScript resource type.  
 
 ## Actors
 
