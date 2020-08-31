@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="testscript-assert-compareToValue"/>
-  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue"/>
+  <id value="testscript-assert-variable"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-variable"/>
   <version value="1.0.0"/>
-  <name value="AEGISTouchstoneTestingTestScriptAssertCompareToValueExtension"/>
-  <title value="AEGIS Touchstone Testing TestScript Assert CompareToValue Extension"/>
+  <name value="AEGISTouchstoneTestingTestScriptAssertVariableExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Assert Variable Extension"/>
   <status value="active"/>
   <date value="2020-08-27"/>
   <publisher value="AEGIS.net, Inc."/>
@@ -15,7 +15,7 @@
       <value value="http://www.aegis.net"/>
     </telecom>
   </contact>
-  <description value="Formal definition of Touchstone TestScript assert compareToValue extension"/>
+  <description value="Formal definition of Touchstone TestScript assert variable extension"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -23,7 +23,7 @@
       <display value="United States of America"/>
     </coding>
   </jurisdiction>
-  <purpose value="TestScript assert compareToValue definition used within the TestScript. The compareToValue defines a direct comparison value to use against the value element value."/>
+  <purpose value="TestScript assert variable definition used within the TestScript. The variable defines a direct comparison value to use against the value element value."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="rim"/>
@@ -47,7 +47,7 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="Comparison value used within the test script assert"/>
-      <definition value="TestScript assert compareToValue definition used within the TestScript. The compareToValue defines a direct comparison value to use against the value element value."/>
+      <definition value="TestScript assert variable definition used within the TestScript. The variable defines a direct comparison value to use against the value element value."/>
       <min value="0"/>
       <max value="1"/>
       <isModifier value="false"/>
@@ -56,7 +56,7 @@
       <path value="Extension.url"/>
       <min value="1"/>
       <max value="1"/>
-      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-variable"/>
     </element>
     <element id="Extension.valueString">
       <path value="Extension.valueString"/>

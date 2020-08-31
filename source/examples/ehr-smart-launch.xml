@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="ehr-smart-launch"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/ehr-smart-launch"/>
+  <version value="1.0.0"/>
+  <name value="EHRSMARTLaunch"/>
+  <status value="active"/>
+  <date value="2020-08-27"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <name value="Touchstone Support"/>
+    <telecom>
+      <system value="email"/>
+      <value value="Touchstone_Support@aegis.net"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Demonstrate the use of the smart-launch operation and the new extension operation-smartLaunchRequestId."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="(c) AEGIS.net, Inc. 2015+"/>
+  <test id="EHRLaunchWithPractitionerScope">
+    <name value="EHR Launch With Practitioner Scope" />
+    <description value="Perform EHR SMART launch sequence and test browser redirect." />
+    <action>
+      <operation>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-smartLaunchRequestId">
+          <valueId value="smartLaunchRequest1" />
+        </extension>
+        <type>
+          <system value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
+          <code value="smart-launch" />
+        </type>
+        <description value="EHR server redirects client browser to Touchstone app launch URL" />
+        <encodeRequestUrl value="false"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="EHR server redirects client browser to Touchstone app launch URI. Client browser sent from EHR server to app launch URI of client app as described in SMART EHR Launch Sequence." />
+        <direction value="request" />
+        <operator value="contains" />
+        <requestURL value="/oauth2/smart/launch" />
+        <sourceId value="smartLaunchRequest1" />
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

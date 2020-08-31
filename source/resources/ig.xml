@@ -53,12 +53,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/testscript-assert-compareToValue"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/testscript-assert-rule"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -77,6 +71,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/testscript-assert-variable"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/testscript-operation-oauth2AuthzRedirectId"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -84,6 +84,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-operation-smartLaunchRequestId"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -98,6 +104,12 @@
         <reference value="StructureDefinition/testscript"/>
       </reference>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/ehr-smart-launch"/>
+      </reference>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>

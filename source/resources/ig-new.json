@@ -68,12 +68,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/testscript-assert-compareToValue"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/testscript-assert-rule"
       },
       "exampleBoolean" : false
@@ -92,6 +86,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/testscript-assert-variable"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/testscript-operation-oauth2AuthzRedirectId"
       },
       "exampleBoolean" : false
@@ -99,6 +99,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/testscript-operation-oauth2AuthzRequestId"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-operation-smartLaunchRequestId"
       },
       "exampleBoolean" : false
     },
@@ -113,6 +119,12 @@
         "reference" : "StructureDefinition/testscript"
       },
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/ehr-smart-launch"
+      },
+      "exampleBoolean" : true
     },
     {
       "reference" : {

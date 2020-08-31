@@ -19,7 +19,7 @@
       <use value="work"/>
     </telecom>
   </contact>
-  <description value="Demonstrate the use of the oauth2-autorize operation and the new extensions stopTestOnFail."/>
+  <description value="Demonstrate the use of the oauth2-authorize operation and the new extensions variable-paramField, operation-oauth2AuthzRequestId, operation-oauth2AuthzRedirectId, assert-variable and assert-stopTestOnFail."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -92,7 +92,7 @@
     </action>
     <action>
       <assert>
-        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue">
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-variable">
           <valueString value="https://oauth2.aegis.net/auth"/>
         </extension>
         <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">

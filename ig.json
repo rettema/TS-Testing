@@ -19,11 +19,6 @@
       "base": "StructureDefinition-testscript-ruleset.html",
       "source": "structuredefinition-testscript-ruleset.xml"
     },
-    "StructureDefinition/testscript-assert-compareToValue": {
-      "defns": "StructureDefinition-testscript-assert-compareToValue-definitions.html",
-      "base": "StructureDefinition-testscript-assert-compareToValue.html",
-      "source": "structuredefinition-testscript-assert-compareToValue.xml"
-    },
     "StructureDefinition/testscript-assert-rule": {
       "defns": "StructureDefinition-testscript-assert-rule-definitions.html",
       "base": "StructureDefinition-testscript-assert-rule.html",
@@ -39,6 +34,11 @@
       "base": "StructureDefinition-testscript-assert-stopTestOnFail.html",
       "source": "structuredefinition-testscript-assert-stopTestOnFail.xml"
     },
+    "StructureDefinition/testscript-assert-variable": {
+      "defns": "StructureDefinition-testscript-assert-variable-definitions.html",
+      "base": "StructureDefinition-testscript-assert-variable.html",
+      "source": "structuredefinition-testscript-assert-variable.xml"
+    },
     "StructureDefinition/testscript-operation-oauth2AuthzRedirectId": {
       "defns": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId-definitions.html",
       "base": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId.html",
@@ -49,6 +49,11 @@
       "base": "StructureDefinition-testscript-operation-oauth2AuthzRequestId.html",
       "source": "structuredefinition-testscript-operation-oauth2AuthzRequestId.xml"
     },
+    "StructureDefinition/testscript-operation-smartLaunchRequestId": {
+      "defns": "StructureDefinition-testscript-operation-smartLaunchRequestId-definitions.html",
+      "base": "StructureDefinition-testscript-operation-smartLaunchRequestId.html",
+      "source": "structuredefinition-testscript-operation-smartLaunchRequestId.xml"
+    },
     "StructureDefinition/testscript-variable-paramField": {
       "defns": "StructureDefinition-testscript-variable-paramField-definitions.html",
       "base": "StructureDefinition-testscript-variable-paramField.html",
@@ -58,6 +63,10 @@
       "defns": "StructureDefinition-testscript-definitions.html",
       "base": "StructureDefinition-testscript.html",
       "source": "structuredefinition-testscript.xml"
+    },
+    "TestScript/ehr-smart-launch": {
+      "base": "TestScript-ehr-smart-launch.html",
+      "source": "ehr-smart-launch.xml"
     },
     "TestScript/oauth2-standalone-launch": {
       "base": "TestScript-oauth2-standalone-launch.html",

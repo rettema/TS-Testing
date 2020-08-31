@@ -105,6 +105,13 @@
       <type>
         <code value="BackboneElement"/>
       </type>
+      <constraint>
+        <key value="tst-7"/>
+        <severity value="error"/>
+        <human value="Setup operation SHALL contain either sourceId or targetId or params or url."/>
+        <expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('capabilities' |'search' | 'transaction' | 'history' | 'smart-launch'))"/>
+        <xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value='capabilities' or f:type/f:code/@value='search' or f:type/f:code/@value='transaction' or f:type/f:code/@value='history' or f:type/f:code/@value='smart-launch')"/>
+      </constraint>
     </element>
     <element id="TestScript.setup.action.operation.id">
       <path value="TestScript.setup.action.operation.id"/>
@@ -141,6 +148,18 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
     </element>
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-smartLaunchRequestId">
+      <path value="TestScript.setup.action.operation.extension"/>
+      <sliceName value="testscript-operation-smartLaunchRequestId"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-smartLaunchRequestId"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
     <element id="TestScript.setup.action.operation.type">
       <path value="TestScript.setup.action.operation.type"/>
       <min value="0"/>
@@ -161,18 +180,6 @@
         <description value="The allowable operation code types."/>
         <valueSet value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-operation-codes"/>
       </binding>
-    </element>
-    <element id="TestScript.setup.action.assert.extension:testscript-assert-compareToValue">
-      <path value="TestScript.setup.action.assert.extension"/>
-      <sliceName value="testscript-assert-compareToValue"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="Extension"/>
-        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-compareToValue"/>
-      </type>
-      <mustSupport value="true"/>
-      <isModifier value="false"/>
     </element>
     <element id="TestScript.setup.action.assert.extension:testscript-assert-rule">
       <path value="TestScript.setup.action.assert.extension"/>
@@ -209,6 +216,28 @@
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.assert.extension:testscript-assert-variable">
+      <path value="TestScript.setup.action.assert.extension"/>
+      <sliceName value="testscript-assert-variable"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-variable"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.test.action.operation">
+      <path value="TestScript.test.action.operation"/>
+      <constraint>
+        <key value="tst-8"/>
+        <severity value="error"/>
+        <human value="Test operation SHALL contain either sourceId or targetId or params or url."/>
+        <expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('capabilities' |'search' | 'transaction' | 'history' | 'smart-launch'))"/>
+        <xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value='capabilities' or f:type/f:code/@value='search' or f:type/f:code/@value='transaction' or f:type/f:code/@value='history' or f:type/f:code/@value='smart-launch')"/>
+      </constraint>
     </element>
   </differential>
 </StructureDefinition>
