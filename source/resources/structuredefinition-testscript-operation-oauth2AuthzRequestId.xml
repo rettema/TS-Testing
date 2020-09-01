@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-operation-oauth2AuthzRequestId"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationOauth2AuthzRequestIdExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Operation Oauth2AuthzRequestId Extension"/>
   <status value="active"/>

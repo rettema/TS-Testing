@@ -11,11 +11,11 @@ Builds are manually processed at this time.
 
 ### Find the rendered IG available at
 
-https://touchstone.aegis.net/touchstone/fhir/testing/1.0.0/index.html
+https://touchstone.aegis.net/touchstone/fhir/testing/1.1.0/index.html
 
 ### For the qa build log see
 
-https://touchstone.aegis.net/touchstone/fhir/testing/1.0.0/qa.html
+https://touchstone.aegis.net/touchstone/fhir/testing/1.1.0/qa.html
 
 ---
 

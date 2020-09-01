@@ -18,7 +18,7 @@
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
   }],
   "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "name" : "TouchstoneTesting",
   "title" : "Touchstone Testing",
   "status" : "active",

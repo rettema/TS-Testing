@@ -1,6 +1,6 @@
 title: AEGIS Touchstone Testing Implementation Guide
 copyrightyear: "2020" # copyright date for footer
-historypath: "http://touchstone.aegis.net/touchstone/fhir/testing/1.0.0/history.html" # complete path to IG history file use "history" for an example of what this page would look like
+historypath: "http://touchstone.aegis.net/touchstone/fhir/testing/history.html" # complete path to IG history file use "history" for an example of what this page would look like
 changelink: https://jira.aegis.net
 summaries: true #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials - probably never use this.

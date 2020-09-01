@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-rule"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-rule"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="AEGISTouchstoneTestingTestScriptRuleExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Rule Extension"/>
   <status value="active"/>
@@ -227,7 +227,7 @@
       <sliceName value="outputType"/>
       <short value="Output type value defined either explicitly or dynamically"/>
       <definition value="The explicit or dynamic type value for the output that will be returned to the external rule template."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -257,7 +257,7 @@
       <sliceName value="outputContentType"/>
       <short value="contentType value defined either explicitly or dynamically"/>
       <definition value="The explicit or dynamic contentType value for the output that will be returned to the external rule template."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>

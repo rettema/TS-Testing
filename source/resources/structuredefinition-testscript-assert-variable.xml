@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-assert-variable"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-variable"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="AEGISTouchstoneTestingTestScriptAssertVariableExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Assert Variable Extension"/>
   <status value="active"/>

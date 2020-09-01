@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="AEGISTouchstoneTestingTestScriptProfile"/>
   <title value="AEGIS Touchstone Testing TestScript Profile"/>
   <status value="active"/>

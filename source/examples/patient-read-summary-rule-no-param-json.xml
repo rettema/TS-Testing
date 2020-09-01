@@ -14,7 +14,7 @@
     </extension>
   </extension>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-summary-rule-no-param-json"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0"/>
   <name value="PatientReadSummaryRuleNoParamJson"/>
   <status value="active"/>
   <date value="2020-05-29"/>
