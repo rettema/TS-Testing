@@ -27,37 +27,47 @@
   <content value="complete"/>
   <concept>
     <code value="get"/>
-    <display value="Get"/>
-    <definition value="Perform a simple HTTP GET method."/>
+    <display value="GET"/>
+    <definition value="Perform an HTTP GET method"/>
   </concept>
   <concept>
     <code value="oauth2-authorize"/>
     <display value="OAuth2 Authorize"/>
-    <definition value="OAuth2 auth endpoint."/>
-  </concept>
-  <concept>
-    <code value="oauth2-client-registration"/>
-    <display value="OAuth2 Client Registration"/>
-    <definition value="OAuth2 register endpoint."/>
+    <definition value="OAuth2 auth endpoint"/>
   </concept>
   <concept>
     <code value="oauth2-get-token"/>
     <display value="OAuth2 Get Token"/>
-    <definition value="OAuth2 token endpoint."/>
+    <definition value="OAuth2 token endpoint"/>
   </concept>
   <concept>
     <code value="oauth2-refresh-token"/>
     <display value="OAuth2 Refresh Token"/>
-    <definition value="OAuth2 refresh endpoint."/>
+    <definition value="OAuth2 refresh endpoint"/>
+  </concept>
+  <concept>
+    <code value="oauth2-register"/>
+    <display value="OAuth2 Client Registration"/>
+    <definition value="OAuth2 register endpoint"/>
   </concept>
   <concept>
     <code value="oauth2-revoke-token"/>
     <display value="OAuth2 Revoke Token"/>
-    <definition value="OAuth2 revoke endpoint."/>
+    <definition value="OAuth2 revoke endpoint"/>
+  </concept>
+  <concept>
+    <code value="patch"/>
+    <display value="PATCH"/>
+    <definition value="Perform an HTTP PATCH method."/>
+  </concept>
+  <concept>
+    <code value="post"/>
+    <display value="POST"/>
+    <definition value="Perform an HTTP POST method."/>
   </concept>
   <concept>
     <code value="smart-launch"/>
     <display value="SMART on FHIR Launch"/>
-    <definition value="SMART on FHIR Launch."/>
+    <definition value="SMART on FHIR Launch"/>
   </concept>
 </CodeSystem>

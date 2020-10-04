@@ -8,5 +8,5 @@ This table provides a list of all the versions of the AEGIS Touchstone Testing I
 
 |Date|Version|FHIRVersion|Description|
 |---|---|---|---|
-|**Current Versions**|
-|[Oct 2018](todo.html)|0.1.0|FHIR R4 Ballot 2 (v3.6.0)|First draft|
+|[Oct 2020](../1.1.0/index.html)|1.1.0|FHIR R4 (v4.0.1)|Added support for TestScript OAuth2 and SMART-on-FHIR extensions|
+|[Feb 2020](../1.0.0/index.html)|1.0.0|FHIR R4 (v4.0.1)|Initial support for TestScript rule and ruleset extensions|
