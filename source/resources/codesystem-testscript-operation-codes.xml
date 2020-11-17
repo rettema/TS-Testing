@@ -26,6 +26,11 @@
   <caseSensitive value="true"/>
   <content value="complete"/>
   <concept>
+    <code value="export"/>
+    <display value="Bulk Data Export"/>
+    <definition value="Perform a Bulk Data export operation"/>
+  </concept>
+  <concept>
     <code value="get"/>
     <display value="GET"/>
     <definition value="Perform an HTTP GET method"/>
@@ -54,11 +59,6 @@
     <code value="oauth2-revoke-token"/>
     <display value="OAuth2 Revoke Token"/>
     <definition value="OAuth2 revoke endpoint"/>
-  </concept>
-  <concept>
-    <code value="patch"/>
-    <display value="PATCH"/>
-    <definition value="Perform an HTTP PATCH method."/>
   </concept>
   <concept>
     <code value="post"/>
