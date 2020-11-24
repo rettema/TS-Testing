@@ -15,7 +15,7 @@
       <value value="http://www.aegis.net"/>
     </telecom>
   </contact>
-  <description value="The&#xA0;AEGIS Touchstone Testing TestScript Operation Codes Codes&#xA0;defines a set of codes that are used to indicate the supported operations of a testing engine or tool."/>
+  <description value="The AEGIS Touchstone Testing TestScript Operation Codes  ValueSet defines a set of codes that are used to indicate the supported operations of a testing engine or tool."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

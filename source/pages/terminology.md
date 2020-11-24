@@ -13,6 +13,7 @@ These value sets have been defined for this implementation guide.
 <!-- {% raw %}{% include list-simple-valuesets.xhtml %}{% endraw %} -->
 
 <li><a href="ValueSet-valueset-testscript-operation-codes.html">TestScript Operation Codes ValueSet</a></li>
+<li><a href="ValueSet-valueset-testscript-test-manual-completion-codes.html">TestScript Test Manual Completion Codes ValueSet</a></li>
 
 <br />
 
@@ -24,6 +25,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
-<li><a href="CodeSystem-codesystem-testscript-operation-codes.html">TestScript Operation Codes Codes</a></li>
+<li><a href="CodeSystem-codesystem-testscript-operation-codes.html">TestScript Operation Codes</a></li>
+<li><a href="CodeSystem-codesystem-testscript-test-manual-completion-codes.html">TestScript Test Manual Completion Codes</a></li>
 
 <br />

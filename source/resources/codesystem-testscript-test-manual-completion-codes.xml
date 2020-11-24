@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="codesystem-testscript-test-manual-completion-codes"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-test-manual-completion-codes"/>
+  <version value="1.1.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptTestManualCompletionCodes"/>
+  <title value="AEGIS Touchstone Testing TestScript Test Manual Completion Codes"/>
+  <status value="active"/>
+  <date value="2020-11-24"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="This value set defines a set of codes that override the default behavior of the TestScript.test execution."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="fail"/>
+    <display value="Fail"/>
+    <definition value="Mark the currently waiting operation complete and mark its test failed and proceed with the rest of the tests in the TestScript"/>
+  </concept>
+  <concept>
+    <code value="pass"/>
+    <display value="Pass"/>
+    <definition value="Mark the currently waiting operation complete and mark its test passed (if the test is not failed already) and proceed with the rest of the tests in the TestScript"/>
+  </concept>
+  <concept>
+    <code value="proceed"/>
+    <display value="Proceed"/>
+    <definition value="Mark the currently waiting operation complete and proceed with the rest of the operation executions assert evaluations whatever the outcome"/>
+  </concept>
+  <concept>
+    <code value="stop"/>
+    <display value="Stop"/>
+    <definition value="Mark the currently waiting operation complete and mark its test stopped (if the test has not completed already) and proceed with the rest of the tests in the TestScript"/>
+  </concept>
+</CodeSystem>

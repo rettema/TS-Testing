@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="valueset-testscript-test-manual-completion-codes"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-test-manual-completion-codes"/>
+  <version value="1.1.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptTestManualCompletionCodesValueSet"/>
+  <title value="AEGIS Touchstone Testing TestScript Test Manual Completion Codes ValueSet"/>
+  <status value="active"/>
+  <date value="2020-11-24"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="The AEGIS Touchstone Testing TestScript Test Manual Completion Codes ValueSet defines a set of codes that are used to override the default behavior of the TestScript.test execution."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="For TestScript authors to override the default behavior of the TestScript.test execution."/>
+  <compose>
+    <include>
+      <system value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-test-manual-completion-codes"/>
+    </include>
+  </compose>
+</ValueSet>

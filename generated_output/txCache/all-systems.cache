@@ -15,3 +15,37 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/testscript-test-manual-completion-codes"
+    },
+    {
+      "system" : "http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-test-manual-completion-codes"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/testscript-test-manual-completion-codes"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "pass"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/testscript-test-manual-completion-codes"
+    },
+    {
+      "system" : "http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-test-manual-completion-codes"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://terminology.hl7.org/CodeSystem/testscript-test-manual-completion-codes' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

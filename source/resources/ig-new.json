@@ -50,7 +50,19 @@
     },
     {
       "reference" : {
+        "reference" : "CodeSystem/codesystem-testscript-test-manual-completion-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/valueset-testscript-operation-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/valueset-testscript-test-manual-completion-codes"
       },
       "exampleBoolean" : false
     },
@@ -92,6 +104,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/testscript-operation-authorizeInNewTab"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/testscript-operation-oauth2AuthzRedirectId"
       },
       "exampleBoolean" : false
@@ -105,6 +123,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/testscript-operation-smartLaunchRequestId"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-test-manualCompletion"
       },
       "exampleBoolean" : false
     },

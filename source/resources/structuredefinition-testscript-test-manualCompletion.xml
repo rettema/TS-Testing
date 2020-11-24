@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="testscript-test-manualCompletion"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-test-manualCompletion"/>
+  <version value="1.1.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptTestManualCompletionExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Test Manual Completion Extension"/>
+  <status value="active"/>
+  <date value="2020-11-24"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Formal definition of Touchstone TestScript test manualCompletion extension"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="TestScript test manualCompletion definition used within the TestScript. The manualCompletion defines an override of the default behavior of the TestScript.test execution."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript.setup"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript.test"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Override the default behavior of the TestScript.test execution"/>
+      <definition value="TestScript test manualCompletion definition used within the TestScript. The manualCompletion defines an override of the default behavior of the TestScript.test execution."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-test-manualCompletion"/>
+    </element>
+    <element id="Extension.valueCode">
+      <path value="Extension.valueCode"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-test-manual-completion-codes"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

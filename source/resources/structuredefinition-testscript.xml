@@ -93,6 +93,18 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
     </element>
+    <element id="TestScript.setup.extension:testscript-test-manualCompletion">
+      <path value="TestScript.setup.extension"/>
+      <sliceName value="testscript-test-manualCompletion"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-test-manualCompletion"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
     <element id="TestScript.setup.action.operation">
       <path value="TestScript.setup.action.operation"/>
       <min value="0"/>
@@ -123,6 +135,18 @@
         <min value="0"/>
         <max value="1"/>
       </base>
+    </element>
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-authorizeInNewTab">
+      <path value="TestScript.setup.action.operation.extension"/>
+      <sliceName value="testscript-operation-authorizeInNewTab"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-authorizeInNewTab"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
     </element>
     <element id="TestScript.setup.action.operation.extension:testscript-operation-oauth2AuthzRedirectId">
       <path value="TestScript.setup.action.operation.extension"/>

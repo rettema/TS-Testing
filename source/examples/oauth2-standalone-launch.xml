@@ -58,10 +58,16 @@
     <defaultValue value="launch/patient openid fhirUser offline_access patient/Patient.read"/>
   </variable>
   <test id="StandaloneLaunchWithPatientScope">
+    <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-test-manualCompletion">
+      <valueCode value="pass"/>
+    </extension>
     <name value="Standalone Launch With Patient Scope"/>
     <description value="Perform Standalone SMART launch sequence and test OpenID Connect and token refresh functionality."/>
     <action>
       <operation>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-authorizeInNewTab">
+          <valueBoolean value="true"/>
+        </extension>
         <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRequestId">
           <valueId value="oauth2AuthzRequest1"/>
         </extension>

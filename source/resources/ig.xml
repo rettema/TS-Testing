@@ -35,7 +35,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/codesystem-testscript-test-manual-completion-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/valueset-testscript-operation-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-testscript-test-manual-completion-codes"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -77,6 +89,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/testscript-operation-authorizeInNewTab"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/testscript-operation-oauth2AuthzRedirectId"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -90,6 +108,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/testscript-operation-smartLaunchRequestId"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/testscript-test-manualCompletion"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

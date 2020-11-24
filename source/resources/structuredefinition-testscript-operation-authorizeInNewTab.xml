@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="testscript-operation-authorizeInNewTab"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-authorizeInNewTab"/>
+  <version value="1.1.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptOperationAuthorizeInNewTabExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Operation AuthorizeInNewTab Extension"/>
+  <status value="active"/>
+  <date value="2020-11-24"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Formal definition of Touchstone TestScript operation authorizeInNewTab extension"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="TestScript operation authorizeInNewTab definition used within the TestScript. The authorizeInNewTab defines additional behavior of the oauth2-authorization operation. If true, then OAuth2 Authorization will be done in a new tab."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript.setup.action.operation"/>
+  </context>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript.test.action.operation"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Authorize in new tab for specific oauth2-authorize operation"/>
+      <definition value="TestScript operation authorizeInNewTab definition used within the TestScript. The authorizeInNewTab defines additional behavior of the oauth2-authorization operation. If true, then OAuth2 Authorization will be done in a new tab."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-authorizeInNewTab"/>
+    </element>
+    <element id="Extension.valueBoolean">
+      <path value="Extension.valueBoolean"/>
+      <short value="The authorizeInNewTab boolean value."/>
+      <definition value="If true, then OAuth2 Authorization will be done in a new tab."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

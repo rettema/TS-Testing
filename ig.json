@@ -5,9 +5,17 @@
       "source": "codesystem-testscript-operation-codes.xml",
       "base": "CodeSystem-codesystem-testscript-operation-codes.html"
     },
+    "CodeSystem/codesystem-testscript-test-manual-completion-codes": {
+      "source": "codesystem-testscript-test-manual-completion-codes.xml",
+      "base": "CodeSystem-codesystem-testscript-test-manual-completion-codes.html"
+    },
     "ValueSet/valueset-testscript-operation-codes": {
       "source": "valueset-testscript-operation-codes.xml",
       "base": "ValueSet-valueset-testscript-operation-codes.html"
+    },
+    "ValueSet/valueset-testscript-test-manual-completion-codes": {
+      "source": "valueset-testscript-test-manual-completion-codes.xml",
+      "base": "ValueSet-valueset-testscript-test-manual-completion-codes.html"
     },
     "StructureDefinition/testscript-rule": {
       "defns": "StructureDefinition-testscript-rule-definitions.html",
@@ -39,6 +47,11 @@
       "base": "StructureDefinition-testscript-assert-variable.html",
       "source": "structuredefinition-testscript-assert-variable.xml"
     },
+    "StructureDefinition/testscript-operation-authorizeInNewTab": {
+      "defns": "StructureDefinition-testscript-operation-authorizeInNewTab-definitions.html",
+      "base": "StructureDefinition-testscript-operation-authorizeInNewTab.html",
+      "source": "structuredefinition-testscript-operation-authorizeInNewTab.xml"
+    },
     "StructureDefinition/testscript-operation-oauth2AuthzRedirectId": {
       "defns": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId-definitions.html",
       "base": "StructureDefinition-testscript-operation-oauth2AuthzRedirectId.html",
@@ -53,6 +66,11 @@
       "defns": "StructureDefinition-testscript-operation-smartLaunchRequestId-definitions.html",
       "base": "StructureDefinition-testscript-operation-smartLaunchRequestId.html",
       "source": "structuredefinition-testscript-operation-smartLaunchRequestId.xml"
+    },
+    "StructureDefinition/testscript-test-manualCompletion": {
+      "defns": "StructureDefinition-testscript-test-manualCompletion-definitions.html",
+      "base": "StructureDefinition-testscript-test-manualCompletion.html",
+      "source": "structuredefinition-testscript-test-manualCompletion.xml"
     },
     "StructureDefinition/testscript-variable-paramField": {
       "defns": "StructureDefinition-testscript-variable-paramField-definitions.html",
