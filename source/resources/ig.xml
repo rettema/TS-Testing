@@ -3,7 +3,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="net.aegis.touchstone.touchstone.fhir.testing"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing"/>
-  <version value="1.1.0"/>
+  <version value="1.2.0"/>
   <name value="TouchstoneTesting"/>
   <title value="Touchstone Testing"/>
   <status value="active"/>
@@ -132,6 +132,12 @@
     <resource>
       <reference>
         <reference value="TestScript/ehr-smart-launch"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/ndjson-assertion-prefix"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

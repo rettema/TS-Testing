@@ -86,6 +86,10 @@
       "base": "TestScript-ehr-smart-launch.html",
       "source": "ehr-smart-launch.xml"
     },
+    "TestScript/ndjson-assertion-prefix": {
+      "base": "TestScript-ndjson-assertion-prefix.html",
+      "source": "ndjson-assertion-prefix.xml"
+    },
     "TestScript/oauth2-standalone-launch": {
       "base": "TestScript-oauth2-standalone-launch.html",
       "source": "oauth2-standalone-launch.xml"
@@ -115,7 +119,7 @@
   "topofpage": "true",
   "jurisdiction": "US",
   "allviews": "true",
-  "fixed-business-version": "1.1.0",
+  "fixed-business-version": "1.2.0",
   "title": "Touchstone Testing",
   "npm-name": "net.aegis.touchstone.touchstone.fhir.testing",
   "igtemplate-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",

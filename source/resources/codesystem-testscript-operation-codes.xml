@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="codesystem-testscript-operation-codes"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
-  <version value="1.1.0"/>
+  <version value="1.2.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationCodes"/>
   <title value="AEGIS Touchstone Testing TestScript Operation Codes"/>
   <status value="active"/>
