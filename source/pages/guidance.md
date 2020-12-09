@@ -139,6 +139,8 @@ Evaluation and validation of this NDJSON format for FHIR requires extended capab
 * TestScript.test.action.assert.path
 * TestScript.test.action.assert.resource
 
+### NDJSON Assertion Prefix Syntax and Usage
+
 **NDJSON Assertion Prefix** syntax is specified within curly braces proceeding the normal expected content of these element values and is composed of 3 optional parts:
 
 <span style="font-weight:bold">{ <span style="color:green">Evaluation-Operator</span> | <span style="color:purple">Filter-Index-Range</span> | <span style="color:red">Filter-Path</span> } Regular-Assert</span>
@@ -152,15 +154,13 @@ The **NDJSON Assertion Prefix** syntax is applied in 4 stages:
 <li><span style="font-weight:bold; color:green">Evaluation-Operator</span>. '<span style="font-weight:bold; color:green">any</span>' or '<span style="font-weight:bold; color:green">all</span>' - If '<span style="color:green">any</span>' operator is used then overall assertion evaluation passes if a single resource passes. The default is '<span style="color:green">all</span>'.</li>
 </ol>
 
-### NDJSON Assertion Prefix
-
 #### TestScript Example
 
 The following TestScript provides a comprehensive list of asserts that show various usage examples of the **NDJSON Assertion Prefix** Syntax.
 
 * [NDJSON Assertion Prefix Syntax Example](TestScript-ndjson-assertion-prefix.html)
 
-<p id="publish-box">Here are some portions from this TestScript illustrating key examples of the **NDJSON Assertion Prefix** syntax.</p>
+<p id="publish-box">Here are some portions from this TestScript illustrating key examples of the <strong>NDJSON Assertion Prefix</strong> syntax.</p>
 
 #### TestScript.profile.reference
 
