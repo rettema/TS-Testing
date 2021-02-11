@@ -19,6 +19,175 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 <!-- end TOC -->
 
+## Touchstone Placeholders
+
+The Touchstone Placeholders are special predefined TestScript variables and may be used where standard TestScript variables are allowed: static fixtures and operation.params, operation.requestHeader.value, operation.url, and assert.value element values.
+
+These Touchstone Placeholders fall into two (2) categories
+
+- Predefined User Unique Data Values
+- Functions for Dynamic Data Generation
+
+### Predefined User Unique Data Values
+
+The predefined user unique data value placeholders are strings of varying lengths from 1 to 20 characters. They are defined of three (3) types:
+
+- Character only; for example, <span style="font-weight:bold; color:blue">${C6}</span>
+- Digits only; for example, <span style="font-weight:bold; color:blue">${D9}</span>
+- Characters + Digits; for example, <span style="font-weight:bold; color:blue">${CD14}</span>
+
+Users may view their assigned placeholder variable values in Touchstone via the user name menu item <span style="font-weight:bold; color:blue">${} My Placeholders</span>.
+
+<span style="color:red"><span style="font-weight:bold">Guaranteed Value Uniqueness</span> - All predefined user unique data value placeholder values with a character length of 6 or more are guaranteed to be unique.</span>
+
+### Functions for Dynamic Data Generation
+
+There are three (3) available functional constructs for dynamic data generation:
+
+- CURRENTDATE and CURRENTDATETIME
+- DATE and DATETIME (relative to dynamic variable)
+- UUID, UUID-ST, UUID-NODASH and UUID-ST-NODASH
+
+#### CURRENTDATE[TIME]
+
+These function placeholder variables provide support for date and datetime values based on the current date (today) and current datetime (now). Optional comma separated offset arguments apply date and time arithmetic providing relative date and time generated values.
+
+**Syntax/Format** ${&lt;placeholder name&gt;[, &lt;datetime portion code&gt;, &lt;offset value&gt;]}
+Where,
+* &lt;placeholder name&gt; is **CURRENTDATE** or **CURRENTDATETIME**
+* &lt;datetime portion code&gt; is the character indicating what portion of the date or datetime value will be offset. Valid characters are derived from the following Java SimpleDateFormat pattern string "yyMMddHHmmss"
+* &lt;offset value&gt; is the signed integer value used to adjust the date or time
+* &lt;datetime portion code&gt;, &lt;offset value&gt; may be repeated for more complex arithmetic
+
+**Examples**
+<table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:solid windowtext 1pt">
+	<thead>
+		<tr>
+			<td style="font-weight:bold">Placeholder Example</td>
+			<td style="font-weight:bold">Description</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>${CURRENTDATE}</td>
+		<td>The current date (today)</td>
+	</tr>
+	<tr>
+		<td>${CURRENTDATETIME}</td>
+		<td>The current date and time (today)</td>
+	</tr>
+	<tr>
+		<td>${CURRENTDATE,d,-10}</td>
+		<td>The date 10 days before the current date</td>
+	</tr>
+	<tr>
+		<td>${CURRENTDATETIME,d,10}</td>
+		<td>The date and time 10 days after the current date and time</td>
+	</tr>
+	<tr>
+		<td>${CURRENTDATE,y,-1}</td>
+		<td>The date 1 year before the current date</td></tr>
+	<tr>
+		<td>${CURRENTDATETIME,H,10}</td>
+		<td>The date and time 10 hours after the current date and time</td>
+	</tr>
+</table>
+
+#### DATE[TIME]
+
+These function placeholder variables provide support for date and datetime values based on a dynamic variable user input date or datetime value. Optional comma separated offset arguments apply date and time arithmetic providing relative date and time generated values.
+
+**Syntax/Format** ${&lt;placeholder name&gt;, &lt;relative value&gt;[, &lt;datetime portion code&gt;, &lt;offset value&gt;]}
+Where,
+* &lt;placeholder name&gt; is **DATE** or **DATETIME**
+* &lt;relative value&gt; is a dynamic variable defined in the current TestScript that holds the relative date or datetime value
+  * <span style="color:red">The dynamic variable must be defined in TestScript without path/expression; its value will be entered by the user during Test Setup</span>
+* &lt;datetime portion code&gt; is the character indicating what portion of the date or datetime value will be offset. Valid characters are derived from the following Java SimpleDateFormat pattern string "yyMMddHHmmss"
+* &lt;offset value&gt; is the signed integer value used to adjust the date or time
+* &lt;datetime portion code&gt;, &lt;offset value&gt; may be repeated for more complex arithmetic
+
+**Examples**
+<table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:solid windowtext 1pt">
+	<thead>
+		<tr>
+			<td style="font-weight:bold">Placeholder Example</td>
+			<td style="font-weight:bold">Description</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>${DATE, medicationDate}</td>
+		<td>The value of the user entered medicationDate will be used as-is</td>
+	</tr>
+	<tr>
+		<td>${DATETIME, medicationDateTime}</td>
+		<td>The value of the user entered medicationDateTime will be used as-is</td>
+	</tr>
+	<tr>
+		<td>${DATE, medicationDate, d, -10}</td>
+		<td>The value of the user entered medicationDate minus 10 days will be used</td>
+	</tr>
+	<tr>
+		<td>${DATETIME, medicationDateTime, M, -1}</td>
+		<td>The value of the user entered medicationDateTime minus 1 month will be used</td>
+	</tr>
+</table>
+
+#### UUID[-ST|-NODASH|-ST-NODASH]
+
+These function placeholder variables provide support for generation of UUID values with predefined formatting.
+
+**Syntax/Format** ${&lt;placeholder name&gt;}
+Where,
+* &lt;placeholder name&gt; is **UUID**, **UUID-ST**, **UUID-NODASH** or **UUID-ST-NODASH**
+
+**Examples**
+<table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;border:solid windowtext 1pt">
+	<thead>
+		<tr>
+			<td style="font-weight:bold">Placeholder Example</td>
+			<td style="font-weight:bold">Description</td>
+		</tr>
+	</thead>
+	<tr>
+		<td>${UUID}</td>
+		<td>A single generated UUID string value without the standard prefix; e.g., '3ed6eb79-fc68-443a-996f-08167f5bdef0'</td>
+	</tr>
+	<tr>
+		<td>${UUID-ST}</td>
+		<td>A single generated UUID string value including the standard prefix; e.g., 'urn:uuid:3ed6eb79-fc68-443a-996f-08167f5bdef0'</td>
+	</tr>
+	<tr>
+		<td>${UUID-NODASH}</td>
+		<td>A single generated UUID string value without the standard prefix and dash characters removed; e.g., '3ed6eb79fc68443a996f08167f5bdef0'</td>
+	</tr>
+	<tr>
+		<td>${UUID-ST-NODASH}</td>
+		<td>A single generated UUID string value including the standard prefix and dash characters removed; e.g., 'urn:uuid:3ed6eb79fc68443a996f08167f5bdef0'</td>
+	</tr>
+</table>
+
+### Usage
+
+The Touchstone Placeholder, both predefined values and functions, are typically defined in static fixtures used as an operation request payload; for example, create or update. Touchstone's TestScript Execution interface provides both a Raw and Resolved view of static fixtures where the pre and post test execution contents can be examined.
+
+**Raw Example** - _Patient.name_, _Patient.birthDate_
+<pre><code>&lt;name&gt;
+  &lt;use value="official"/&gt;
+  &lt;family value="Smith${C7}"/&gt;
+  &lt;given value="John${C6}"/&gt;
+  &lt;birthDate value="${CURRENTDATE,d,-7}"/&gt;
+&lt;/name&gt;</code></pre>
+
+**Resolved Example** - _Patient.name_, _Patient.birthDate_
+<pre><code>&lt;name&gt;
+  &lt;use value="official"/&gt;
+  &lt;family value="SmithMqCERSQ"/&gt;
+  &lt;given value="JohnXRCnsc"/&gt;
+  &lt;birthDate value="2021-01-27"/&gt;
+&lt;/name&gt;</code></pre>
+
+
+------------------------------------------------------------------------
+
 ## Rule and RuleSet Extensions
 
 The TestScript rule and ruleset extensions can be used to reference complex validation logic that goes beyond what the basic TestScript assert element supports. As such, rules are recommended only when a TestScript assert cannot be used in its basic form.
