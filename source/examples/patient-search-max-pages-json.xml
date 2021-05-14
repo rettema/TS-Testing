@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="patient-search-max-pages-json"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-search-max-pages-json"/>
+  <version value="1.3.0"/>
+  <name value="PatientSearchMaxPagesJson"/>
+  <status value="active"/>
+  <date value="2021-05-13"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <name value="Touchstone Support"/>
+    <telecom>
+      <system value="email"/>
+      <value value="Touchstone_Support@aegis.net"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Demonstrate the use of a Patient search and use of the new operation extension searchMaxPages."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="(c) AEGIS.net, Inc. 2015+"/>
+  <profile id="bundle-profile">
+    <reference value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+  </profile>
+  <test id="PatientSearchMaxPages">
+    <name value="PatientSearchMaxPages"/>
+    <description value="Search for Patients in JSON format with page count = 10 and max number of auto retrieve pages = 5. The expected response code is 200 (Ok). The expected response payload is Bundle searchset with matching Patient resources in JSON format."/>
+    <action>
+      <operation>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages">
+          <valuePositiveInt value="5"/>
+        </extension>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="search"/>
+        </type>
+        <resource value="Patient"/>
+        <description value="Search for all Patients with general practitioner equal to Practitioner/example."/>
+        <accept value="json"/>
+        <encodeRequestUrl value="false"/>
+        <params value="?_count=10&amp;general-practitioner=Practitioner/example"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is 200(Ok)."/>
+        <direction value="response"/>
+        <responseCode value="200"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned format is JSON."/>
+        <direction value="response"/>
+        <contentType value="json"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned resource type is Bundle."/>
+        <direction value="response"/>
+        <resource value="Bundle"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-stopTestOnFail">
+          <valueBoolean value="false"/>
+        </extension>
+        <description value="Validate that the returned resource conforms to the base FHIR Bundle profile."/>
+        <direction value="response"/>
+        <validateProfileId value="bundle-profile"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

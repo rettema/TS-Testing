@@ -124,6 +124,13 @@
         <expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('capabilities' |'search' | 'transaction' | 'history' | 'smart-launch'))"/>
         <xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value='capabilities' or f:type/f:code/@value='search' or f:type/f:code/@value='transaction' or f:type/f:code/@value='history' or f:type/f:code/@value='smart-launch')"/>
       </constraint>
+      <constraint>
+        <key value="smp-1"/>
+        <severity value="error"/>
+        <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
+        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists() and type.code = 'search')"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages'] and ./type/code[@value='search']"/>
+      </constraint>
     </element>
     <element id="TestScript.setup.action.operation.id">
       <path value="TestScript.setup.action.operation.id"/>
@@ -168,6 +175,18 @@
       <type>
         <code value="Extension"/>
         <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-oauth2AuthzRequestId"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-searchMaxPages">
+      <path value="TestScript.setup.action.operation.extension"/>
+      <sliceName value="testscript-operation-searchMaxPages"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages"/>
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
@@ -261,6 +280,13 @@
         <human value="Test operation SHALL contain either sourceId or targetId or params or url."/>
         <expression value="sourceId.exists() or (targetId.count() + url.count() + params.count() = 1) or (type.code in ('capabilities' |'search' | 'transaction' | 'history' | 'smart-launch'))"/>
         <xpath value="f:sourceId or ((f:targetId or f:url or f:params) and (count(f:targetId) + count(f:url) + count(f:params) =1)) or (f:type/f:code/@value='capabilities' or f:type/f:code/@value='search' or f:type/f:code/@value='transaction' or f:type/f:code/@value='history' or f:type/f:code/@value='smart-launch')"/>
+      </constraint>
+      <constraint>
+        <key value="smp-2"/>
+        <severity value="error"/>
+        <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
+        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists() and type.code = 'search')"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages'] and ./type/code[@value='search']"/>
       </constraint>
     </element>
   </differential>
