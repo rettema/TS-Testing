@@ -5,5 +5,5 @@
 The following examples are provided to illustrate conformant resource content to this profile.
 </p>
 
-- [patient-search-max-pages](TestScript-patient-search-max-pages-json.html)
+- [patient-search-pages-next](TestScript-patient-search-pages-next-json.html)
 

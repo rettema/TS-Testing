@@ -62,10 +62,10 @@
       "base": "StructureDefinition-testscript-operation-oauth2AuthzRequestId.html",
       "source": "structuredefinition-testscript-operation-oauth2AuthzRequestId.xml"
     },
-    "StructureDefinition/testscript-operation-searchMaxPages": {
-      "defns": "StructureDefinition-testscript-operation-searchMaxPages-definitions.html",
-      "base": "StructureDefinition-testscript-operation-searchMaxPages.html",
-      "source": "structuredefinition-testscript-operation-searchMaxPages.xml"
+    "StructureDefinition/testscript-operation-pagesNext": {
+      "defns": "StructureDefinition-testscript-operation-pagesNext-definitions.html",
+      "base": "StructureDefinition-testscript-operation-pagesNext.html",
+      "source": "structuredefinition-testscript-operation-pagesNext.xml"
     },
     "StructureDefinition/testscript-operation-smartLaunchRequestId": {
       "defns": "StructureDefinition-testscript-operation-smartLaunchRequestId-definitions.html",
@@ -119,9 +119,9 @@
       "base": "TestScript-patient-read-notfound-ruleset-with-param-json.html",
       "source": "patient-read-notfound-ruleset-with-param-json.xml"
     },
-    "TestScript/patient-search-max-pages-json": {
-      "base": "TestScript-patient-search-max-pages-json.html",
-      "source": "patient-search-max-pages-json.xml"
+    "TestScript/patient-search-pages-next-json": {
+      "base": "TestScript-patient-search-pages-next-json.html",
+      "source": "patient-search-pages-next-json.xml"
     }
   },
   "source": "ig.xml",

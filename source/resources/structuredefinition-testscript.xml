@@ -128,8 +128,8 @@
         <key value="smp-1"/>
         <severity value="error"/>
         <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
-        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists() and type.code = 'search')"/>
-        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages'] and ./type/code[@value='search']"/>
+        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists() and type.code = 'search')"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and ./type/code[@value='search']"/>
       </constraint>
     </element>
     <element id="TestScript.setup.action.operation.id">
@@ -179,14 +179,14 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
     </element>
-    <element id="TestScript.setup.action.operation.extension:testscript-operation-searchMaxPages">
+    <element id="TestScript.setup.action.operation.extension:testscript-operation-pagesNext">
       <path value="TestScript.setup.action.operation.extension"/>
-      <sliceName value="testscript-operation-searchMaxPages"/>
+      <sliceName value="testscript-operation-pagesNext"/>
       <min value="0"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages"/>
+        <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext"/>
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
@@ -285,8 +285,8 @@
         <key value="smp-2"/>
         <severity value="error"/>
         <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
-        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages').exists() and type.code = 'search')"/>
-        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages'] and ./type/code[@value='search']"/>
+        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists() and type.code = 'search')"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and ./type/code[@value='search']"/>
       </constraint>
     </element>
   </differential>

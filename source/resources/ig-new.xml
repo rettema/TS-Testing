@@ -119,7 +119,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/testscript-operation-searchMaxPages"/>
+        <reference value="StructureDefinition/testscript-operation-pagesNext"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -197,7 +197,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="TestScript/patient-search-max-pages-json"/>
+        <reference value="TestScript/patient-search-pages-next-json"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>

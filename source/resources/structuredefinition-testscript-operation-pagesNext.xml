@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="testscript-operation-searchMaxPages"/>
-  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages"/>
+  <id value="testscript-operation-pagesNext"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext"/>
   <version value="1.3.0"/>
-  <name value="AEGISTouchstoneTestingTestScriptOperationSearchMaxPagesExtension"/>
-  <title value="AEGIS Touchstone Testing TestScript Operation SearchMaxPages Extension"/>
+  <name value="AEGISTouchstoneTestingTestScriptOperationPagesNextExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Operation pagesNext Extension"/>
   <status value="active"/>
   <date value="2021-05-13"/>
   <publisher value="AEGIS.net, Inc."/>
@@ -23,7 +23,7 @@
       <display value="United States of America"/>
     </coding>
   </jurisdiction>
-  <purpose value="TestScript operation searchMaxPages definition used within the TestScript. The searchMaxPages defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
+  <purpose value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="rim"/>
@@ -47,7 +47,7 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="The maximum number of search pages to auto retrieve and process. Only valid when used with the 'search' operation code value."/>
-      <definition value="TestScript operation searchMaxPages definition used within the TestScript. The searchMaxPages defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
+      <definition value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
       <min value="0"/>
       <max value="1"/>
       <isModifier value="false"/>
@@ -56,11 +56,11 @@
       <path value="Extension.url"/>
       <min value="1"/>
       <max value="1"/>
-      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-searchMaxPages"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext"/>
     </element>
     <element id="Extension.valuePositiveInt">
       <path value="Extension.valuePositiveInt"/>
-      <short value="The searchMaxPages positive integer value."/>
+      <short value="The pagesNext positive integer value."/>
       <definition value="If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
       <min value="1"/>
       <max value="1"/>

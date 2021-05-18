@@ -122,7 +122,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/testscript-operation-searchMaxPages"
+        "reference" : "StructureDefinition/testscript-operation-pagesNext"
       },
       "exampleBoolean" : false
     },
@@ -200,7 +200,7 @@
     },
     {
       "reference" : {
-        "reference" : "TestScript/patient-search-max-pages-json"
+        "reference" : "TestScript/patient-search-pages-next-json"
       },
       "exampleBoolean" : true
     }],
