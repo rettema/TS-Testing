@@ -18,7 +18,7 @@
     "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
   }],
   "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing",
-  "version" : "1.3.0",
+  "version" : "1.4.0",
   "name" : "TouchstoneTesting",
   "title" : "Touchstone Testing",
   "status" : "active",
@@ -63,6 +63,12 @@
     {
       "reference" : {
         "reference" : "ValueSet/valueset-testscript-test-manual-completion-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/testscript-dynamic-fixture"
       },
       "exampleBoolean" : false
     },
@@ -165,6 +171,12 @@
     {
       "reference" : {
         "reference" : "TestScript/oauth2-standalone-launch"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/patient-create-dynamic-fixture-json"
       },
       "exampleBoolean" : true
     },

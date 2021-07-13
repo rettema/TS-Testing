@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="testscript-dynamic-fixture"/>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-dynamic-fixture"/>
+  <version value="1.4.0"/>
+  <name value="AEGISTouchstoneTestingTestScriptDynamicFixtureExtension"/>
+  <title value="AEGIS Touchstone Testing TestScript Dynamic Fixture Extension"/>
+  <status value="active"/>
+  <date value="2021-07-13"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net"/>
+    </telecom>
+  </contact>
+  <description value="Formal definitions of Touchstone TestScript dynamic-fixture extensions"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="TestScript dynamic-fixture definition used by the Test Engine to dynamically prompt for a fixture' contents."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="TestScript"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Dynamic fixture used within the test script"/>
+      <definition value="TestScript dynamic-fixture definition used by the Test Engine to dynamically prompt for a fixture' contents."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:id">
+      <path value="Extension.extension"/>
+      <sliceName value="id"/>
+      <short value="Dynamic fixture unique id within TestScript"/>
+      <definition value="The identifier for this dynamic fixture used in action.operation and action.assert."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:id.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="id"/>
+    </element>
+    <element id="Extension.extension:id.valueId">
+      <path value="Extension.extension.valueId"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+    </element>
+    <element id="Extension.extension:resourceType">
+      <path value="Extension.extension"/>
+      <sliceName value="resourceType"/>
+      <short value="Dynamic fixture resource type"/>
+      <definition value="The resource type of this dynamic fixture needed to determine Conformance operation details."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:resourceType.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="resourceType"/>
+    </element>
+    <element id="Extension.extension:resourceType.valueString">
+      <path value="Extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:contentType">
+      <path value="Extension.extension"/>
+      <sliceName value="contentType"/>
+      <short value="Dynamic fixture content's syntax FHIR mime-type value"/>
+      <definition value="The content type of this dynamic fixture needed to validate the contents for proper JSON/XML when the user enters it on the TestSetup UI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:contentType.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="contentType"/>
+    </element>
+    <element id="Extension.extension:contentType.valueString">
+      <path value="Extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:description">
+      <path value="Extension.extension"/>
+      <sliceName value="description"/>
+      <short value="Natural language description of the dynamic fixture"/>
+      <definition value="A free text natural language description of the dynamic fixture and its purpose."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:description.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="description"/>
+    </element>
+    <element id="Extension.extension:description.valueString">
+      <path value="Extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.extension:hint">
+      <path value="Extension.extension"/>
+      <sliceName value="hint"/>
+      <short value="Hint help text for the user when entering the dynamic fixture"/>
+      <definition value="Displayable text string with hint help information to the user when entering the dynamic fixture contents."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.extension:hint.url">
+      <path value="Extension.extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="hint"/>
+    </element>
+    <element id="Extension.extension:hint.valueString">
+      <path value="Extension.extension.valueString"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedUri value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-dynamic-fixture"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</StructureDefinition>

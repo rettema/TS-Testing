@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="patient-create-dynamic-fixture-json"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <extension url="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-dynamic-fixture">
+    <extension url="id">
+      <valueId value="resource-create" />
+    </extension>
+    <extension url="resourceType">
+      <valueString value="Patient" />
+    </extension>
+    <extension url="contentType">
+      <valueString value="application/fhir+json" />
+    </extension>
+    <extension url="description">
+      <valueString value="Patient create fixture. Enter the FHIR Patient resource that is to be created on the target test system." />
+    </extension>
+    <extension url="hint">
+      <valueString value="Patient resource contents" />
+    </extension>
+  </extension>
+  <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-create-dynamic-fixture-json"/>
+  <version value="1.4.0"/>
+  <name value="PatientCreateDynamicFixtureJson"/>
+  <status value="active"/>
+  <date value="2021-07-13"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <name value="Touchstone Support"/>
+    <telecom>
+      <system value="email"/>
+      <value value="Touchstone_Support@aegis.net"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Demonstrate the use of a Patient create and use of the new TestScript extension testscript-dynamic-fixture."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="(c) AEGIS.net, Inc. 2015+"/>
+  <test id="PatientCreateDynamicFixture">
+    <name value="PatientCreateDynamicFixture"/>
+    <description value="Create a Patient resource using a dynamic fixture content in JSON format. The expected response code is 201 (Create)."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="create"/>
+        </type>
+        <resource value="Patient"/>
+        <description value="Create a Patient resource using a dynamic fixture."/>
+        <accept value="json"/>
+        <contentType value="json"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="resource-create"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is 201(Create)."/>
+        <direction value="response"/>
+        <responseCode value="201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

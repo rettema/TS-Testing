@@ -17,6 +17,11 @@
       "source": "valueset-testscript-test-manual-completion-codes.xml",
       "base": "ValueSet-valueset-testscript-test-manual-completion-codes.html"
     },
+    "StructureDefinition/testscript-dynamic-fixture": {
+      "defns": "StructureDefinition-testscript-dynamic-fixture-definitions.html",
+      "base": "StructureDefinition-testscript-dynamic-fixture.html",
+      "source": "structuredefinition-testscript-dynamic-fixture.xml"
+    },
     "StructureDefinition/testscript-rule": {
       "defns": "StructureDefinition-testscript-rule-definitions.html",
       "base": "StructureDefinition-testscript-rule.html",
@@ -99,6 +104,10 @@
       "base": "TestScript-oauth2-standalone-launch.html",
       "source": "oauth2-standalone-launch.xml"
     },
+    "TestScript/patient-create-dynamic-fixture-json": {
+      "base": "TestScript-patient-create-dynamic-fixture-json.html",
+      "source": "patient-create-dynamic-fixture-json.xml"
+    },
     "TestScript/patient-read-stopTestOnFail-json": {
       "base": "TestScript-patient-read-stopTestOnFail-json.html",
       "source": "patient-read-stopTestOnFail-json.xml"
@@ -128,7 +137,7 @@
   "topofpage": "true",
   "jurisdiction": "US",
   "allviews": "true",
-  "fixed-business-version": "1.3.0",
+  "fixed-business-version": "1.4.0",
   "title": "Touchstone Testing",
   "npm-name": "net.aegis.touchstone.touchstone.fhir.testing",
   "igtemplate-dir": "C:/Users/richard.ettema/Documents/GitHub/TS-Testing/",

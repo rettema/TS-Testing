@@ -3,7 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="valueset-testscript-operation-codes"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ValueSet/valueset-testscript-operation-codes"/>
-  <version value="1.2.0"/>
+  <version value="1.4.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationCodesValueSet"/>
   <title value="AEGIS Touchstone Testing TestScript TestScript Operation Codes ValueSet"/>
   <status value="active"/>

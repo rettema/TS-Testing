@@ -8,6 +8,7 @@ This table provides a list of all the versions of the AEGIS Touchstone Testing I
 
 |Date|Version|FHIRVersion|Description|
 |---|---|---|---|
+|[Jul 2021](../1.4.0/index.html)|1.4.0|FHIR R4 (v4.0.1)|Added support for TestScript Dynamic Fixture extension|
 |[May 2021](../1.3.0/index.html)|1.3.0|FHIR R4 (v4.0.1)|Added support for TestScript Search Max Pages extension|
 |[Feb 2021](../1.2.0/index.html)|1.2.0|FHIR R4 (v4.0.1)|Added support for TestScript Bulk Data extensions and functionality|
 |[Oct 2020](../1.1.0/index.html)|1.1.0|FHIR R4 (v4.0.1)|Added support for TestScript OAuth2 and SMART-on-FHIR extensions|
