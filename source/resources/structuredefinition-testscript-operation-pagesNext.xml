@@ -7,7 +7,7 @@
   <name value="AEGISTouchstoneTestingTestScriptOperationPagesNextExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Operation pagesNext Extension"/>
   <status value="active"/>
-  <date value="2021-05-13"/>
+  <date value="2021-09-02"/>
   <publisher value="AEGIS.net, Inc."/>
   <contact>
     <telecom>
@@ -15,7 +15,7 @@
       <value value="http://www.aegis.net"/>
     </telecom>
   </contact>
-  <description value="Formal definition of Touchstone TestScript operation authorizeInNewTab extension"/>
+  <description value="Formal definition of Touchstone TestScript operation pagesNext extension"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -23,7 +23,7 @@
       <display value="United States of America"/>
     </coding>
   </jurisdiction>
-  <purpose value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
+  <purpose value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the history and search operations. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="rim"/>
@@ -46,8 +46,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="The maximum number of search pages to auto retrieve and process. Only valid when used with the 'search' operation code value."/>
-      <definition value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the search operation. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
+      <short value="The maximum number of search pages to auto retrieve and process. Only valid when used with the 'history' or 'search' operation code values."/>
+      <definition value="TestScript operation pagesNext definition used within the TestScript. The pagesNext defines additional behavior of the history and search operations. If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
       <min value="0"/>
       <max value="1"/>
       <isModifier value="false"/>
@@ -61,7 +61,7 @@
     <element id="Extension.valuePositiveInt">
       <path value="Extension.valuePositiveInt"/>
       <short value="The pagesNext positive integer value."/>
-      <definition value="If present, the positive integer value defines the maximum number of search pages to auto retrieve and process."/>
+      <definition value="If present, the positive integer value defines the maximum number of history or search pages to auto retrieve and process."/>
       <min value="1"/>
       <max value="1"/>
       <type>

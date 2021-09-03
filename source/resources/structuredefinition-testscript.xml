@@ -7,7 +7,7 @@
   <name value="AEGISTouchstoneTestingTestScriptProfile"/>
   <title value="AEGIS Touchstone Testing TestScript Profile"/>
   <status value="active"/>
-  <date value="2018-08-27"/>
+  <date value="2021-09-02"/>
   <publisher value="AEGIS.net, Inc."/>
   <contact>
     <telecom>
@@ -139,9 +139,9 @@
       <constraint>
         <key value="smp-1"/>
         <severity value="error"/>
-        <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
-        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists() and type.code = 'search')"/>
-        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and ./type/code[@value='search']"/>
+        <human value="Extension testscript-operation-pagesNext can only be used with operation.type.code equal to 'history' or 'search'"/>
+        <expression value="(extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not()) or ((extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists()) and (type.code in ('history' | 'search')))"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and (./type/code[@value='history'] or ./type/code[@value='search'])"/>
       </constraint>
     </element>
     <element id="TestScript.setup.action.operation.id">
@@ -296,9 +296,9 @@
       <constraint>
         <key value="smp-2"/>
         <severity value="error"/>
-        <human value="Extension seachMaxPages can only be used with operation.type.code equal to 'search'"/>
-        <expression value="extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not() or (extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists() and type.code = 'search')"/>
-        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and ./type/code[@value='search']"/>
+        <human value="Extension testscript-operation-pagesNext can only be used with operation.type.code equal to 'history' or 'search'"/>
+        <expression value="(extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists().not()) or ((extension.where(url = 'http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext').exists()) and (type.code in ('history' | 'search')))"/>
+        <xpath value="./extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext']|extension[@url='http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext'] and (./type/code[@value='history'] or ./type/code[@value='search'])"/>
       </constraint>
     </element>
   </differential>

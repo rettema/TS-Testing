@@ -213,6 +213,7 @@ With the addition of a more robust OAuth2, SMART-on-FHIR and Bulk Data support i
 * [AEGIS Touchstone Testing TestScript Operation AuthorizeInNewTab Extension](StructureDefinition-testscript-operation-authorizeInNewTab.html)
 * [AEGIS Touchstone Testing TestScript Operation Oauth2AuthzRedirectId Extension](StructureDefinition-testscript-operation-oauth2AuthzRedirectId.html)
 * [AEGIS Touchstone Testing TestScript Operation Oauth2AuthzRequestId Extension](StructureDefinition-testscript-operation-oauth2AuthzRequestId.html)
+* [AEGIS Touchstone Testing TestScript Operation PagesNext Extension](StructureDefinition-testscript-operation-pagesNext.html)
 * [AEGIS Touchstone Testing TestScript Operation SmartLaunchRequestId Extension](StructureDefinition-testscript-operation-smartLaunchRequestId.html)
 * [AEGIS Touchstone Testing TestScript Test ManualCompletion Extension](StructureDefinition-testscript-test-manualCompletion.html)
 
