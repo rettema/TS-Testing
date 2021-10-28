@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-operation-pagesNext"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-pagesNext"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationPagesNextExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Operation pagesNext Extension"/>
   <status value="active"/>

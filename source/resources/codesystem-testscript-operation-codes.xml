@@ -3,7 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="codesystem-testscript-operation-codes"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/CodeSystem/codesystem-testscript-operation-codes"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationCodes"/>
   <title value="AEGIS Touchstone Testing TestScript Operation Codes"/>
   <status value="active"/>
@@ -34,6 +34,21 @@
     <code value="get"/>
     <display value="GET"/>
     <definition value="Perform an HTTP GET method"/>
+  </concept>
+  <concept>
+    <code value="history-instance"/>
+    <display value="History Instance"/>
+    <definition value="Retrieve the change history for a particular resource instance"/>
+  </concept>
+  <concept>
+    <code value="history-type"/>
+    <display value="History Type"/>
+    <definition value="Retrieve the change history for a particular resource type"/>
+  </concept>
+  <concept>
+    <code value="history-system"/>
+    <display value="History System"/>
+    <definition value="Retrieve the change history for all resource types"/>
   </concept>
   <concept>
     <code value="oauth2-authorize"/>

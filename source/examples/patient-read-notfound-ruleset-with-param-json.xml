@@ -50,7 +50,7 @@
     </extension>
   </extension>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-read-notfound-ruleset-with-param-json"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="PatientReadNotFoundRulesetWithParamJson"/>
   <status value="active"/>
   <date value="2020-05-29"/>

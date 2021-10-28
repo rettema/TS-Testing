@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-operation-authorizeInNewTab"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-operation-authorizeInNewTab"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="AEGISTouchstoneTestingTestScriptOperationAuthorizeInNewTabExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Operation AuthorizeInNewTab Extension"/>
   <status value="active"/>

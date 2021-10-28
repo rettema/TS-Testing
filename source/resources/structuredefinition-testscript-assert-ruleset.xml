@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-assert-ruleset"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-assert-ruleset"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="AEGISTouchstoneTestingTestScriptAssertRulesetExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Assert Ruleset Extension"/>
   <status value="active"/>

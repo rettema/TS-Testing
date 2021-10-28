@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="testscript-dynamic-fixture"/>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript-dynamic-fixture"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="AEGISTouchstoneTestingTestScriptDynamicFixtureExtension"/>
   <title value="AEGIS Touchstone Testing TestScript Dynamic Fixture Extension"/>
   <status value="active"/>

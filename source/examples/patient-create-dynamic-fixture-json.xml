@@ -23,7 +23,7 @@
     </extension>
   </extension>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/TestScript/patient-create-dynamic-fixture-json"/>
-  <version value="1.4.0"/>
+  <version value="1.5.0"/>
   <name value="PatientCreateDynamicFixtureJson"/>
   <status value="active"/>
   <date value="2021-07-13"/>
