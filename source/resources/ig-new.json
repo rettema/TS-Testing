@@ -3,19 +3,19 @@
   "id" : "net.aegis.touchstone.touchstone.fhir.testing",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\resources"
+    "valueString" : "D:\\GitHub\\rettema\\TS-Testing\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\examples"
+    "valueString" : "D:\\GitHub\\rettema\\TS-Testing\\source\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\framework"
+    "valueString" : "D:\\GitHub\\rettema\\TS-Testing\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TS-Testing\\source\\pages"
+    "valueString" : "D:\\GitHub\\rettema\\TS-Testing\\source\\pages"
   }],
   "url" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing",
   "version" : "1.5.0",

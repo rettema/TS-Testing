@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="net.aegis.touchstone.touchstone.fhir.testing"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\resources"/>
+    <valueString value="D:\GitHub\rettema\TS-Testing\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\examples"/>
+    <valueString value="D:\GitHub\rettema\TS-Testing\source\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\framework"/>
+    <valueString value="D:\GitHub\rettema\TS-Testing\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TS-Testing\source\pages"/>
+    <valueString value="D:\GitHub\rettema\TS-Testing\source\pages"/>
   </extension>
   <url value="http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing"/>
   <version value="1.5.0"/>

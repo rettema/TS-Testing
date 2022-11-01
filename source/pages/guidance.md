@@ -185,6 +185,100 @@ The Touchstone Placeholder, both predefined values and functions, are typically 
   &lt;birthDate value="2021-01-27"/&gt;
 &lt;/name&gt;</code></pre>
 
+------------------------------------------------------------------------
+
+## Minimum ID (minimumID) Assert Processing
+
+The FHIR specification's definition of [FHIR Testing](http://hl7.org/fhir/testing.html) contains a brief description within the [Test search operation](http://hl7.org/fhir/testing.html#search) section on how a Test Engine is to evaluate and process a TestScript assert using the [minimumId element](http://hl7.org/fhir/testscript-definitions.html#TestScript.setup.action.assert.minimumId). This description states:
+
+~~~
+<action>
+	<assert>
+		<minimumId value="F1"/>
+		<sourceId value="R1"/>
+	</assert>
+</action>
+
+Test engines will parse the 'body' of the F1 fixture and verify that each element and its value matches the corresponding element in the R1 response body. In other words, R1 is verified to be a 'superset' of F1. The resource id element in the body will be ignored during comparison. The headers will also be ignored.
+
+F1 can be statically defined or it can be the [responseId](http://hl7.org/fhir/testscript-definitions.html#TestScript.setup.action.operation.responseId) for another operation. If [sourceId](http://hl7.org/fhir/testscript-definitions.html#TestScript.setup.action.assert.sourceId) is not specified, then test engines will use the response of the last operation.
+~~~
+
+This is a high-level functional description that does not provide sufficient information regarding the required definition of how the detailed comparison is to be performed.  In order to provide more clarity the Touchstone implementation of the minimumId assert comparison logic now provides the following structural comparison of the minimumId fixture and the fixture being evaluated behaviors:
+
+* **Attribute or element ordering** - If the comparison encounters an order mismatch of an attribute or element between the minimumId fixture and the fixture being evaluated, this does not result in an error as long as the path to the attribute or element matches.
+  * This is particularly important when comparing JSON formatted fixtures where attribute order is not significant.
+  * For example, the following two fixtures are considered to be matching:
+    ~~~
+    {
+      name: "hello",
+      title: "goodbye"
+    }
+    
+    {
+      title: "goodbye",
+      name: "hello"
+    }
+    ~~~
+
+* **Array value ordering** - The order of an array of the same attribute or element is allowed to differ in the comparison; also, additional attribute or element instances are allowed in between the minimumId fixture attribute or element instances such that the index can differ.
+  * For example, the following two fixtures are considered equal even though the order of array elements differs:
+    ~~~
+    min fixture:
+    {
+      names: ["hello", "goodbye"]
+    }
+    
+    compare fixture:
+    {
+      names: ["goodbye", "hello"]
+    }
+    ~~~
+  * For example, these fixtures would match even though there are extra values:
+    ~~~
+    min fixture:
+    {
+      names: ["hello", "goodbye"]
+    }
+    
+    compare1 fixture:
+    {
+      names: ["hello", "greeting", "goodbye"]
+    }
+    
+    compare2 fixture:
+    {
+      names: ["greeting", "hello", "goodbye"]
+    }
+    
+    compare3 fixture:
+    {
+      names: ["hello", "goodbye", "greeting"]
+    }
+    ~~~
+
+* **Duplicate attributes or elements** - When the minimumId fixture has duplicate attributes or elements (in a JSON attribute array or XML repeated element) the fixture being evaluated must have the same number of duplicated attributes or elements.
+  * For example, the following two fixtures would not match as the compare fixture does not have the same number of duplicate repeating attributes as the min fixture:
+    ~~~
+    min fixture:
+    {
+      names: ["hello", "hello"]
+    }
+    
+    compare1 fixture:
+    {
+      names: ["hello"]
+    }
+    ~~~
+
+* **Comparison results** - The comparison results now include ALL inconsistencies between the minimumId fixture and the fixture being evaluated (previously only the first mismatch was reported back to the user).
+
+* **Attribute or element present regardless of value** - The ability to allow for the existence of an attribute or element regardless of its value is possible with the XML syntax but not JSON due to the JSON requirement that an attribute value must be present.
+  * For example, this minimumId fixture XML element without a value will match any same named XML element in the fixture being evaluated regardless of its value:
+    ~~~
+    <novalueelement/>
+    ~~~
+  * This concept cannot be expressed in JSON syntax.
 
 ------------------------------------------------------------------------
 
@@ -609,3 +703,4 @@ The following asserts show the use of various combinations of the **NDJSON Asser
 ------------------------------------------------------------------------
 
 {% include link-list.md %}
+
